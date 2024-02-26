@@ -1,0 +1,14 @@
+1708613061724	geckodriver	INFO	Listening on 127.0.0.1:59015
+1708613064892	mozrunner::runner	INFO	Running command: "C:\\Users\\v8\\.cache\\selenium\\firefox\\win64\\123.0\\firefox.exe" "--marionette" "--remote-debugging-por ... 9016" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\v8\\AppData\\Local\\Temp\\rust_mozprofileeAOqSj"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1708613066213	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1708613066366	Marionette	INFO	Listening on port 59183
+WebDriver BiDi listening on ws://127.0.0.1:59016
+Read port: 59183
+1708613066632	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59016/devtools/browser/c8f8c079-f389-424d-83b6-023da05ad19e
+1708613074219	Marionette	INFO	Stopped listening on port 59183
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 570: OperationError: Could not move temporary file(C:\Users\v8\AppData\Local\Temp\rust_mozprofileeAOqSj\sessionCheckpoints.json.tmp) to destination(C:\Users\v8\AppData\Local\Temp\rust_mozprofileeAOqSj\sessionCheckpoints.json)
