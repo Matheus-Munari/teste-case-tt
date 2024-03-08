@@ -1,133 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-03-05T13:50:10.960307" rpa="false" schemaversion="5">
-<suite id="s1" name="Home-Page" source="c:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\testes\home-page.robot">
-<test id="s1-t1" name="Verificar se o usuário consegue realizar buscas na barra de pesquisa" line="9">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-03-08T12:10:49.206621" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="c:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\testes\login.robot">
+<test id="s1-t1" name="Teste de login usando o email" line="28">
 <kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-05T13:50:12.300200" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<msg time="2024-03-08T12:10:49.590134" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-05T13:50:12.298949" elapsed="4.089218"/>
+<status status="PASS" start="2024-03-08T12:10:49.590134" elapsed="3.802015"/>
 </kw>
-<status status="PASS" start="2024-03-05T13:50:12.296951" elapsed="4.092537"/>
+<status status="PASS" start="2024-03-08T12:10:49.590134" elapsed="3.802015"/>
 </kw>
-<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Quando o usuario tentar logar com o email" owner="login_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-05T13:50:16.391074" elapsed="0.786077"/>
+<status status="PASS" start="2024-03-08T12:10:53.394329" elapsed="0.659104"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-03-05T13:50:17.177151" elapsed="0.346014"/>
+<status status="PASS" start="2024-03-08T12:10:54.053433" elapsed="0.324333"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-05T13:50:17.524195" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<msg time="2024-03-08T12:10:54.381648" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T13:50:17.524195" elapsed="0.153265"/>
+<status status="PASS" start="2024-03-08T12:10:54.377766" elapsed="0.140361"/>
 </kw>
+<status status="PASS" start="2024-03-08T12:10:53.394329" elapsed="1.123798"/>
+</kw>
+<kw name="E preencher o nome de usuario certo" owner="login_page">
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${INPUT-USER}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-03-05T13:50:17.677460" elapsed="1.332083"/>
+<status status="PASS" start="2024-03-08T12:10:54.518127" elapsed="1.165037"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T13:50:19.009543" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<msg time="2024-03-08T12:10:55.683164" level="INFO">Typing text 'matheusmunari00@gmail.com' into text field '//*[@autocomplete="username"]'.</msg>
 <arg>${INPUT-USER}</arg>
-<arg>usuariomatteste</arg>
+<arg>matheusmunari00@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T13:50:19.009543" elapsed="0.382895"/>
+<status status="PASS" start="2024-03-08T12:10:55.683164" elapsed="0.305661"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-05T13:50:19.393455" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<msg time="2024-03-08T12:10:55.992880" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
 <arg>${BOTAO-AVANCAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T13:50:19.392438" elapsed="0.086316"/>
+<status status="PASS" start="2024-03-08T12:10:55.992880" elapsed="0.063253"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT-SENHA}</arg>
+<arg>${INPUT-USER-LOGIN-POR-EMAIL}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-05T13:50:19.479820" elapsed="0.701177"/>
+<status status="PASS" start="2024-03-08T12:10:56.056133" elapsed="0.472108"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T13:50:20.182008" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
-<arg>${INPUT-SENHA}</arg>
-<arg>teste@1234</arg>
+<msg time="2024-03-08T12:10:56.531245" level="INFO">Typing text 'usuariomatteste' into text field '//*[@data-testid="ocfEnterTextTextInput"]'.</msg>
+<arg>${INPUT-USER-LOGIN-POR-EMAIL}</arg>
+<arg>${USUARIO-CORRETO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T13:50:20.182008" elapsed="0.159134"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-05T13:50:20.341652" level="INFO">Clicking element '//*[text()="Entrar"]'.</msg>
-<arg>${BOTAO-LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T13:50:20.341652" elapsed="0.189892"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENTO-NOTIFICACOES}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-05T13:50:20.532631" elapsed="2.589519"/>
-</kw>
-<status status="PASS" start="2024-03-05T13:50:16.389488" elapsed="6.733732"/>
-</kw>
-<kw name="E insere um nome de usuário na barra de pesquisa" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT-BUSCA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-05T13:50:23.127760" elapsed="1.118985"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T13:50:24.249021" level="INFO">Typing text 'Marcelo Bechler' into text field '//*[@placeholder="Search"]'.</msg>
-<arg>${INPUT-BUSCA}</arg>
-<arg>Marcelo Bechler</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T13:50:24.247997" elapsed="0.397650"/>
-</kw>
-<status status="PASS" start="2024-03-05T13:50:23.126504" elapsed="1.520246"/>
-</kw>
-<kw name="E confirma a busca" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BUSCAR-USER}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-05T13:50:24.649770" elapsed="1.319562"/>
+<status status="PASS" start="2024-03-08T12:10:56.531245" elapsed="0.163832"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-03-05T13:50:25.970947" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
-<msg time="2024-03-05T13:50:25.971882" level="INFO">Pressing special key ENTER to browser.</msg>
-<msg time="2024-03-05T13:50:25.971882" level="INFO">Releasing special key ENTER.</msg>
+<msg time="2024-03-08T12:10:56.699085" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-08T12:10:56.699085" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-08T12:10:56.699085" level="INFO">Releasing special key ENTER.</msg>
 <arg>none</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-03-05T13:50:25.969332" elapsed="0.118465"/>
+<status status="PASS" start="2024-03-08T12:10:56.699085" elapsed="0.020554"/>
 </kw>
-<status status="PASS" start="2024-03-05T13:50:24.648772" elapsed="1.439025"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-08T12:10:58.720292" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-08T12:10:56.719639" elapsed="2.000653"/>
 </kw>
-<kw name="Então o usuário buscado deve aparecer no topo da página" owner="home_page">
+<status status="PASS" start="2024-03-08T12:10:54.518127" elapsed="4.202165"/>
+</kw>
+<kw name="E preencher a senha correta" owner="login_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${USUARIO-BUSCADO}</arg>
+<arg>${INPUT-SENHA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-05T13:50:26.089797" elapsed="2.477287"/>
+<status status="PASS" start="2024-03-08T12:10:58.720292" elapsed="0.047222"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:10:58.767514" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T12:10:58.767514" elapsed="0.192758"/>
+</kw>
+<status status="PASS" start="2024-03-08T12:10:58.720292" elapsed="0.239980"/>
+</kw>
+<kw name="E apertar &quot;Enter&quot;" owner="login_page">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:10:58.964593" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-08T12:10:58.965144" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-08T12:10:58.965144" level="INFO">Releasing special key ENTER.</msg>
+<arg>none</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-08T12:10:58.962510" elapsed="0.029565"/>
+</kw>
+<status status="PASS" start="2024-03-08T12:10:58.960272" elapsed="0.031803"/>
+</kw>
+<kw name="Então o usuario devera ser redirecionado para a pagina inicial" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-08T12:10:58.992075" elapsed="2.900857"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-03-05T13:50:28.674109" level="INFO">Element '//*[@href="/marcelobechler"]' is displayed.</msg>
-<arg>${USUARIO-BUSCADO}</arg>
+<msg time="2024-03-08T12:11:01.946258" level="INFO">Element '//*[@href="/notifications"]' is displayed.</msg>
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-05T13:50:28.567084" elapsed="0.107025"/>
+<status status="PASS" start="2024-03-08T12:11:01.892932" elapsed="0.053326"/>
 </kw>
-<status status="PASS" start="2024-03-05T13:50:26.088798" elapsed="2.586323"/>
+<status status="PASS" start="2024-03-08T12:10:58.992075" elapsed="2.954183"/>
 </kw>
 <kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-05T13:50:28.677124" elapsed="2.747061"/>
+<status status="PASS" start="2024-03-08T12:11:01.949631" elapsed="2.385043"/>
 </kw>
-<status status="PASS" start="2024-03-05T13:50:28.676122" elapsed="2.749173"/>
+<status status="PASS" start="2024-03-08T12:11:01.949631" elapsed="2.385043"/>
 </kw>
-<status status="PASS" start="2024-03-05T13:50:12.295952" elapsed="19.130358"/>
+<status status="PASS" start="2024-03-08T12:10:49.589336" elapsed="14.745338"/>
 </test>
-<status status="PASS" start="2024-03-05T13:50:10.969840" elapsed="20.459879"/>
+<status status="PASS" start="2024-03-08T12:10:49.215314" elapsed="15.119360"/>
 </suite>
 <statistics>
 <total>
@@ -136,7 +138,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Home-Page">Home-Page</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
