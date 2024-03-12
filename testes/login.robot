@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../resources/setupteardown.robot
+
 Resource    ../pages/login_page.robot
 Test Setup    Dado que eu acesse o site do twitter
 Test Teardown    Fechar navegador

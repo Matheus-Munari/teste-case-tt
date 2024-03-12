@@ -1,23 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    XML
-*** Variables ***
-${BOTAO-ENTRAR}    //*[@href="/login"]
-${INPUT-USER}    //*[@autocomplete="username"]
-${BOTAO-AVANCAR}    //*[text()="Avançar"]
-${INPUT-SENHA}    //*[@autocomplete="current-password"]
-${ELEMENTO-NOTIFICACOES}    //*[@href="/notifications"]
-${USUARIO-CORRETO}    usuariomatteste
-${SENHA-CORRETA}    teste@1234
-${USUARIO-ERRADO}    testeusererrado
-${SENHA-ERRADA}    senhaErrada
-${NOTIFICACAO-USUARIO-NAO-ENCONTRADO}    //*[text()="Desculpe, mas não encontramos sua conta."]
-${NOTIFICACAO-SENHA-INCORRETA}    //*[text()="Senha incorreta."]
-${USUARIO-VAZIO}
-${SENHA-VAZIA}
-${BOTAO-OCULTAR-SENHA}    //*[@aria-label="Ocultar senha"]
-${BOTAO-LOGIN}    //*[@data-testid="LoginForm_Login_Button"]
-${INPUT-USER-LOGIN-POR-EMAIL}    //*[@data-testid="ocfEnterTextTextInput"]
+Resource    ../resources/main.robot
 
 *** Keywords ***
 Quando o usuario clica no botão entrar

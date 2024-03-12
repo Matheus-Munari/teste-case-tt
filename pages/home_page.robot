@@ -1,26 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    FakerLibrary
-
-*** Variables ***
-${INPUT-BUSCA}    //*[@placeholder="Search"]
-${BUSCAR-USER}    //*[text()="Marcelo Bechler"]
-${USUARIO-BUSCADO}    //*[@href="/marcelobechler"] 
-${BOTAO-NOVA-POSTAGEM}    //*[@href="/compose/post"]
-${JANELA-POST}    //*[text()="What is happening?!"]
-${BOTAO-POSTAR}    //*[text()="Post"]
-${NOTIFICACAO-POST}    //*[text()="Your post was sent."]
-${PERFIL}    //*[@href="/usuariomatteste"]
-${ULTIMO-POST}    //*[@data-testid="tweet"]
-${BOTAO-OPCAO-POST}    //div[@data-testid="primaryColumn"]//*[contains(@aria-label, "More")]
-${BOTAO-DELETE-POST}    //*[text()="Delete"]
-${NOTIFICACAO-DELETE-POST}    //*[text()="Your post was deleted"]
-${BOTAO-MENSAGENS}    //*[@data-testid="AppTabBar_DirectMessage_Link"]
-${INPUT-NOVA-MENSAGEM}    //*[@data-testid="dmComposerTextInput_label"]
-${CONVERSA}    //*[@data-testid="conversation"]
-${MENSAGEM-TESTE}    "Teste de nova mensagem"
-${ULTIMA-MENSAGEM}    ""
-
+Library    XML
+Resource    ../resources/main.robot
 
 
 *** Keywords ***
@@ -37,14 +19,17 @@ Então o usuário buscado deve aparecer no topo da página
     Element Should Be Visible    ${USUARIO-BUSCADO}
 
 E clicar no botão de nova postagem
+    Wait Until Element Is Visible    ${BOTAO-NOVA-POSTAGEM}
     Click Element    ${BOTAO-NOVA-POSTAGEM}
 
 E escrever uma nova postagem
     Wait Until Element Is Visible    ${BOTAO-POSTAR}
     ${DATA-HORA}    Execute Javascript     return new Date().toLocaleString()
-    Press Keys    None    Data do teste ${DATA-HORA}   
-
+    Set Global Variable    ${MENSAGEM-POST}    Teste de postagem de foto. Data e hora:${DATA-HORA}  
+    Set Global Variable    ${ULTIMA-POSTAGEM}     //*[text()="${MENSAGEM-POST}"]
+    Input Text    ${AREA-POSTAGEM}    ${MENSAGEM-POST}
 E clicar no botao de postar
+    Wait Until Element Is Visible    ${BOTAO-POSTAR}
     Click Element    ${BOTAO-POSTAR}
 
 Então deverá aparecer uma notificação confirmando a postagem
@@ -52,10 +37,12 @@ Então deverá aparecer uma notificação confirmando a postagem
     Element Should Be Visible    ${NOTIFICACAO-POST}
 
 E vai até o seu perfil
-    Input Text    ${INPUT-BUSCA}    usuariomatheusteste
-    Press Keys    none     ENTER
     Wait Until Element Is Visible    ${PERFIL}
     Click Element    ${PERFIL}
+    #Input Text    ${INPUT-BUSCA}    usuariomatheusteste
+    #Press Keys    none     ENTER
+    #Wait Until Element Is Visible    ${PERFIL}
+    #Click Element    ${PERFIL}
 
 E clica na ultima postagem
     Wait Until Element Is Visible    ${ULTIMO-POST}
@@ -97,3 +84,32 @@ E envia uma nova mensagem
 Então a mensagem enviada deve constar na conversa 
     
     Wait Until Element Is Visible    ${ULTIMA-MENSAGEM}
+
+E adicionar uma foto a ser postada 
+    Wait Until Element Is Visible    ${BOTAO-POSTAR}
+    Choose File    ${BOTAO-MIDIA}    C:\\Users\\v8\\Desktop\\projeto-teste-twitter\\teste-case-tt\\resources\\Imagens\\2150829065.jpg
+    Sleep    2s
+
+Então a postagem deve constar no perfil do usuario
+    Wait Until Element Is Enabled    ${PERFIL}
+    Click Element    ${PERFIL}
+    Wait Until Element Is Visible    ${BOTAO-EDITAR-PERFIL}
+    Log To Console    ${ULTIMA-POSTAGEM}
+    Sleep    1s
+    Scroll Element Into View    ${USER-NAME-PERFIL}
+    Element Should Be Visible    ${ULTIMA-POSTAGEM}
+
+E tentar postar uma mensagem sem digitar nada 
+    Wait Until Element Is Visible    ${BOTAO-POSTAR}
+    Input Text    ${AREA-POSTAGEM}    ${POST-EM-BRANCO}
+
+Então o botao de postagem deve estar inativo, impedindo a postagem
+    Element Attribute Value Should Be    ${BOTAO-POSTAR}    aria-disabled    true
+
+E curta uma postagem
+    Wait Until Element Is Visible    ${BOTAO-CURTIR}
+    Click Element    ${BOTAO-CURTIR}
+
+E vai ate a aba de likes
+    Wait Until Element Is Visible    ${ABA-LIKES}
+    Click Element    ${ABA-LIKES}
