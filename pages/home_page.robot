@@ -25,7 +25,7 @@ E clicar no botão de nova postagem
 E escrever uma nova postagem
     Wait Until Element Is Visible    ${BOTAO-POSTAR}
     ${DATA-HORA}    Execute Javascript     return new Date().toLocaleString()
-    Set Global Variable    ${MENSAGEM-POST}    Teste de postagem de foto. Data e hora:${DATA-HORA}  
+    Set Global Variable    ${MENSAGEM-POST}    Teste de nova postagem. Data e hora:${DATA-HORA}  
     Set Global Variable    ${ULTIMA-POSTAGEM}     //*[text()="${MENSAGEM-POST}"]
     Input Text    ${AREA-POSTAGEM}    ${MENSAGEM-POST}
 E clicar no botao de postar
@@ -113,3 +113,17 @@ E curta uma postagem
 E vai ate a aba de likes
     Wait Until Element Is Visible    ${ABA-LIKES}
     Click Element    ${ABA-LIKES}
+
+E verifica se a postagem curtida esta la
+    Wait Until Element Is Visible    ${ULTIMA-POSTAGEM}
+    Element Should Be Visible    ${ULTIMA-POSTAGEM}
+
+E reposte esse post 
+    Wait Until Element Is Visible    ${BOTAO-RETWEET-ANTES}
+    Click Element    ${BOTAO-RETWEET-ANTES}
+    Wait Until Element Is Visible    ${BOTAO-CONFIRMAR-RETWEET}
+    Click Element    ${BOTAO-CONFIRMAR-RETWEET}
+
+Então o botao de repostar deve mudar de cor, indicando a repostagem
+    Wait Until Element Is Visible    ${BOTAO-RETWEET-DEPOIS}
+    Element Should Be Visible    ${BOTAO-RETWEET-DEPOIS}

@@ -47,4 +47,7 @@ ${BOTAO-MAIS-MENU}    //*[@data-testid="AppTabBar_More_Menu"]
 ${BOTAO-BOOKMARKS}    //*[@href="/i/bookmarks"]
 ${BOTAO-CURTIR}    //div[@data-testid="like"]
 ${ABA-LIKES}    //*[@href="/usuariomatteste/likes"]
+${BOTAO-RETWEET-ANTES}    //*[@data-testid="retweet"]
+${BOTAO-CONFIRMAR-RETWEET}    //*[@data-testid="retweetConfirm"]
+${BOTAO-RETWEET-DEPOIS}    //*[@data-testid="unretweet"]
 

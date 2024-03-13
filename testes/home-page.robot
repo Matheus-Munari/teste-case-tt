@@ -60,4 +60,15 @@ Verificar se o usuario consegue curtir uma postagem
     E curta uma postagem
     E vai até o seu perfil
     E vai ate a aba de likes
-    Sleep    3s
+    E clica na ultima postagem
+    E verifica se a postagem curtida esta la
+
+Verificar se o usuario consegue repostar uma postagem
+    Quando o usuario tentar entrar com as credenciais corretas
+    E clicar no botão de nova postagem
+    E escrever uma nova postagem
+    E clicar no botao de postar
+    E vai até o seu perfil
+    E clica na ultima postagem
+    E reposte esse post 
+    Então o botao de repostar deve mudar de cor, indicando a repostagem
