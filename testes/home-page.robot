@@ -6,11 +6,6 @@ Test Setup    Dado que eu acesse o site do twitter
 Test Teardown    Fechar navegador
 
 *** Test Cases ***
-Verificar se o usuário consegue realizar buscas na barra de pesquisa
-    Quando o usuario tentar entrar com as credenciais corretas
-    E insere um nome de usuário na barra de pesquisa
-    E confirma a busca
-    Então o usuário buscado deve aparecer no topo da página
 
 Verificar se o usuário consegue enviar mensagens diretas a outros usuários
     Quando o usuario tentar entrar com as credenciais corretas
@@ -72,3 +67,16 @@ Verificar se o usuario consegue repostar uma postagem
     E clica na ultima postagem
     E reposte esse post 
     Então o botao de repostar deve mudar de cor, indicando a repostagem
+
+# Funcionalidade pesquisar
+Verificar se o usuário consegue buscar um usuario na barra de pesquisa
+    Quando o usuario tentar entrar com as credenciais corretas
+    E insere um nome de usuário na barra de pesquisa
+    E confirma a busca
+    Então o usuário buscado deve aparecer no topo da página
+
+Verificar se o usuario consegue buscar uma hashtag
+    Quando o usuario tentar entrar com as credenciais corretas
+    E pesquisar uma hashtag na barra de pesquisa 
+    Então a primeira postagem deve conter a hashtag procurada
+    Sleep    2s

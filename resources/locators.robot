@@ -50,4 +50,6 @@ ${ABA-LIKES}    //*[@href="/usuariomatteste/likes"]
 ${BOTAO-RETWEET-ANTES}    //*[@data-testid="retweet"]
 ${BOTAO-CONFIRMAR-RETWEET}    //*[@data-testid="retweetConfirm"]
 ${BOTAO-RETWEET-DEPOIS}    //*[@data-testid="unretweet"]
-
+${TESTE}    .#v8
+${BOTAO-ULTIMAS-PESQUISA}    //*[@href="/search?q=.%23v8&src=typed_query&f=live"]
+${TEXTO-POSTAGEM}    //*[@data-testid="tweetText"]

@@ -127,3 +127,18 @@ E reposte esse post
 Então o botao de repostar deve mudar de cor, indicando a repostagem
     Wait Until Element Is Visible    ${BOTAO-RETWEET-DEPOIS}
     Element Should Be Visible    ${BOTAO-RETWEET-DEPOIS}
+
+E pesquisar uma hashtag na barra de pesquisa 
+    Wait Until Element Is Visible    ${INPUT-BUSCA}
+    Click Element    ${INPUT-BUSCA}
+    Press Keys    none    ${TESTE}
+    Press Keys    none    ENTER
+
+Então a primeira postagem deve conter a hashtag procurada
+    Wait Until Element Is Visible    ${BOTAO-ULTIMAS-PESQUISA}
+    Sleep    2s
+    Scroll Element Into View    ${TEXTO-POSTAGEM}
+    ${GET-TEXTO}    Get Text    ${TEXTO-POSTAGEM}
+    Log To Console    ${GET-TEXTO}
+    Element Should Contain    ${TEXTO-POSTAGEM}    v8
+    
