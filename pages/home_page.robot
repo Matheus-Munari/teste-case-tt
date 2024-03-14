@@ -2,6 +2,8 @@
 Library    SeleniumLibrary
 Library    FakerLibrary
 Library    XML
+Library    String
+Library    Collections
 Resource    ../resources/main.robot
 
 
@@ -142,3 +144,65 @@ Então a primeira postagem deve conter a hashtag procurada
     Log To Console    ${GET-TEXTO}
     Element Should Contain    ${TEXTO-POSTAGEM}    v8
     
+
+E pesquisar uma palavra chave na barra de pesquisa 
+    Wait Until Element Is Visible    ${INPUT-BUSCA}
+    Click Element    ${INPUT-BUSCA}
+    Press Keys    none    ferrari
+    Press Keys    none    ENTER
+
+Então a primeira postagem deve conter a palavra chave procurada
+    Wait Until Element Is Visible    ${BOTAO-ULTIMAS-PESQUISA}
+    Sleep    15s
+    Scroll Element Into View    ${TEXTO-POSTAGEM}
+    ${GET-TEXTO}    Get Text    ${TEXTO-POSTAGEM}
+    Log To Console    ${GET-TEXTO}
+    Element Should Contain    ${TEXTO-POSTAGEM}    Ferrari
+
+E abre o menu de pesquisa avancada
+    Wait Until Element Is Visible    ${MENU-PONTOS}
+    Click Element    ${MENU-PONTOS}
+    Wait Until Element Is Visible    ${BUSCA-AVANCADA}
+    Click Element    ${BUSCA-AVANCADA}
+    
+E seleciona a opcao ingles na busca por idioma
+    Wait Until Element Is Visible    ${ELEMENTO-LOCALIZADOR-BUSCA}
+    Scroll Element Into View    ${LABEL-ACCOUNTS}
+    Click Element    ${SELECT-LINGUA}
+    Click Element    ${OPTION-LINGUA}
+    Click Element    ${SELECT-LINGUA}
+    Press Keys    none     ENTER
+
+Então o primeiro post deve estar em ingles
+    Sleep    3s
+    Scroll Element Into View    ${TEXTO-POSTAGEM}
+    ${GET-TEXTO}    Get Text    ${TEXTO-POSTAGEM}
+    Log To Console    ${GET-TEXTO}
+    Element Attribute Value Should Be    ${TEXTO-POSTAGEM}    lang    en
+
+E clica em uma tag que esta em alta 
+    Wait until element is visible    ${BOTAO-EXPLORAR}
+    Click Element    ${BOTAO-EXPLORAR}
+    Wait Until Element Is Visible    ${TAG-EM-ALTA}
+    Click Element    ${TAG-EM-ALTA}
+    Sleep    3s
+    ${GET-VALOR-INPUT}    Get Value    ${INPUT-BUSCA}
+    Log To Console    ${GET-VALOR-INPUT}
+    ${PALAVRAS}    Split String    ${GET-VALOR-INPUT}[1:-1]   
+    Log To Console    ${PALAVRAS}
+    Set Global Variable    ${STRING-BUSCA}     ${PALAVRAS}
+    #${REMOVE-ASPAS-ULTIMO}    Execute Javascript    return arguments[0]    ${PALAVRAS[-1]}
+    #${ULTIMAS-PALAVRAS}    Get From List    ${PALAVRAS}[1:-2]    -2 
+
+Então o ultimo post deve ter a tag em alta buscada
+    Sleep    3s
+    Scroll Element Into View    ${TEXTO-POSTAGEM}
+    ${TAMANHO-LISTA}    Get Length    ${STRING-BUSCA}
+    Log To Console    ${STRING-BUSCA}
+    ${GET-TEXTO-POSTAGEM}    Get Text    ${TEXTO-POSTAGEM}
+    FOR    ${counter}    IN RANGE    0    ${TAMANHO-LISTA}    
+        Element Should Contain    ${TEXTO-POSTAGEM}    ${STRING-BUSCA}[${counter}]    ignore_case=True
+        #Log To Console    ${GET-TEXTO-POSTAGEM}
+        #Log To Console    ${STRING-BUSCA}[${counter}]
+    END    
+        

@@ -51,5 +51,16 @@ ${BOTAO-RETWEET-ANTES}    //*[@data-testid="retweet"]
 ${BOTAO-CONFIRMAR-RETWEET}    //*[@data-testid="retweetConfirm"]
 ${BOTAO-RETWEET-DEPOIS}    //*[@data-testid="unretweet"]
 ${TESTE}    .#v8
-${BOTAO-ULTIMAS-PESQUISA}    //*[@href="/search?q=.%23v8&src=typed_query&f=live"]
+${BOTAO-ULTIMAS-PESQUISA}    //*[text()="Latest"]
 ${TEXTO-POSTAGEM}    //*[@data-testid="tweetText"]
+${MENU-PONTOS}    //*[@data-testid="searchBoxOverflowButton"]
+${BUSCA-AVANCADA}    //*[@href="/search-advanced"]
+${ELEMENTO-LOCALIZADOR-BUSCA}    //*[text()="Example: what’s happening · contains both “what’s” and “happening”"]
+${LABEL-ACCOUNTS}    //*[text()="Accounts"]
+${SELECT-LINGUA}    //select[contains(., 'English')]
+${OPTION-LINGUA}    //option[contains(., 'English')]
+${BOTAO-EXPLORAR}    //*[@href="/explore"]
+${INPUT-BUSCA}    //input[@data-testid="SearchBox_Search_Input"]
+${TAG-EM-ALTA}    //*[@data-testid="trend"]
+${POST-CONTEM}    
+${STRING-BUSCA}

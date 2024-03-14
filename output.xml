@@ -1,166 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-03-13T14:52:29.525834" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-03-14T15:56:29.613614" rpa="false" schemaversion="5">
 <suite id="s1" name="Home-Page" source="c:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\testes\home-page.robot">
-<test id="s1-t1" name="Verificar se o usuario consegue buscar uma hashtag" line="78">
+<test id="s1-t1" name="Verificar se o usuario consegue buscar por postagens em alta" line="96">
 <kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:30.529521" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<msg time="2024-03-14T15:56:30.622454" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-13T14:52:30.529521" elapsed="3.533445"/>
+<status status="PASS" start="2024-03-14T15:56:30.620299" elapsed="3.446253"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-13T14:52:34.064004" elapsed="0.124294"/>
+<status status="PASS" start="2024-03-14T15:56:34.066652" elapsed="0.135986"/>
 </kw>
-<status status="PASS" start="2024-03-13T14:52:30.527074" elapsed="3.662194"/>
+<status status="PASS" start="2024-03-14T15:56:30.603995" elapsed="3.598643"/>
 </kw>
 <kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-13T14:52:34.189268" elapsed="0.394435"/>
+<status status="PASS" start="2024-03-14T15:56:34.206067" elapsed="0.468252"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-03-13T14:52:34.589543" elapsed="0.317672"/>
+<status status="PASS" start="2024-03-14T15:56:34.674319" elapsed="0.323462"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:34.914270" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<msg time="2024-03-14T15:56:35.003310" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-13T14:52:34.914270" elapsed="0.131686"/>
+<status status="PASS" start="2024-03-14T15:56:35.003310" elapsed="0.157751"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${INPUT-USER}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-03-13T14:52:35.045956" elapsed="1.214307"/>
+<status status="PASS" start="2024-03-14T15:56:35.164773" elapsed="1.392626"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:36.260263" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<msg time="2024-03-14T15:56:36.573041" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
 <arg>${INPUT-USER}</arg>
 <arg>${USUARIO-CORRETO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-13T14:52:36.260263" elapsed="0.247134"/>
+<status status="PASS" start="2024-03-14T15:56:36.573041" elapsed="0.221855"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:36.507397" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<msg time="2024-03-14T15:56:36.800879" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
 <arg>${BOTAO-AVANCAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-13T14:52:36.507397" elapsed="0.090580"/>
+<status status="PASS" start="2024-03-14T15:56:36.794896" elapsed="0.082950"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${INPUT-SENHA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-13T14:52:36.597977" elapsed="0.479150"/>
+<status status="PASS" start="2024-03-14T15:56:36.877846" elapsed="0.488992"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:37.079154" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<msg time="2024-03-14T15:56:37.366838" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
 <arg>${INPUT-SENHA}</arg>
 <arg>${SENHA-CORRETA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-13T14:52:37.077127" elapsed="0.147554"/>
+<status status="PASS" start="2024-03-14T15:56:37.366838" elapsed="0.163632"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:37.224681" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<msg time="2024-03-14T15:56:37.530470" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
 <arg>${BOTAO-LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-13T14:52:37.224681" elapsed="0.092871"/>
+<status status="PASS" start="2024-03-14T15:56:37.530470" elapsed="0.074253"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ELEMENTO-NOTIFICACOES}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-13T14:52:37.317552" elapsed="2.752243"/>
+<status status="PASS" start="2024-03-14T15:56:37.604723" elapsed="2.718717"/>
 </kw>
-<status status="PASS" start="2024-03-13T14:52:34.189268" elapsed="5.880527"/>
+<status status="PASS" start="2024-03-14T15:56:34.202638" elapsed="6.121477"/>
 </kw>
-<kw name="E pesquisar uma hashtag na barra de pesquisa" owner="home_page">
+<kw name="E clica em uma tag que esta em alta" owner="home_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT-BUSCA}</arg>
+<arg>${BOTAO-EXPLORAR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-13T14:52:40.074381" elapsed="0.044172"/>
+<status status="PASS" start="2024-03-14T15:56:40.324115" elapsed="0.069212"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:40.118553" level="INFO">Clicking element '//*[@placeholder="Search"]'.</msg>
-<arg>${INPUT-BUSCA}</arg>
+<msg time="2024-03-14T15:56:40.393327" level="INFO">Clicking element '//*[@href="/explore"]'.</msg>
+<arg>${BOTAO-EXPLORAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-13T14:52:40.118553" elapsed="0.228186"/>
+<status status="PASS" start="2024-03-14T15:56:40.393327" elapsed="0.130640"/>
 </kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:40.346739" level="INFO">Sending key(s) ('.#v8',) to page.</msg>
-<msg time="2024-03-13T14:52:40.346739" level="INFO">Sending keys .#v8</msg>
-<arg>none</arg>
-<arg>${TESTE}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-03-13T14:52:40.346739" elapsed="0.139641"/>
-</kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:40.498971" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
-<msg time="2024-03-13T14:52:40.498971" level="INFO">Pressing special key ENTER to browser.</msg>
-<msg time="2024-03-13T14:52:40.498971" level="INFO">Releasing special key ENTER.</msg>
-<arg>none</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-03-13T14:52:40.486380" elapsed="0.063743"/>
-</kw>
-<status status="PASS" start="2024-03-13T14:52:40.073491" elapsed="0.476632"/>
-</kw>
-<kw name="Então a primeira postagem deve conter a hashtag procurada" owner="home_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-ULTIMAS-PESQUISA}</arg>
+<arg>${TAG-EM-ALTA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-13T14:52:40.550123" elapsed="0.250383"/>
+<status status="PASS" start="2024-03-14T15:56:40.525482" elapsed="2.132335"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-14T15:56:42.657817" level="INFO">Clicking element '//*[@data-testid="trend"]'.</msg>
+<arg>${TAG-EM-ALTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-14T15:56:42.657817" elapsed="0.138246"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-13T14:52:42.800828" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2024-03-14T15:56:45.796692" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-13T14:52:40.800506" elapsed="2.000322"/>
+<status status="PASS" start="2024-03-14T15:56:42.796063" elapsed="3.000629"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-14T15:56:45.850155" level="INFO">${GET-VALOR-INPUT} = "Elizabeth Olsen"</msg>
+<var>${GET-VALOR-INPUT}</var>
+<arg>${INPUT-BUSCA}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-14T15:56:45.796692" elapsed="0.053463"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${GET-VALOR-INPUT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-14T15:56:45.850155" elapsed="0.000000"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-03-14T15:56:45.856015" level="INFO">${PALAVRAS} = ['Elizabeth', 'Olsen']</msg>
+<var>${PALAVRAS}</var>
+<arg>${GET-VALOR-INPUT}[1:-1]</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-03-14T15:56:45.854572" elapsed="0.001443"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${PALAVRAS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-14T15:56:45.858227" elapsed="0.000636"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-14T15:56:45.860306" level="INFO">${STRING-BUSCA} = ['Elizabeth', 'Olsen']</msg>
+<arg>${STRING-BUSCA}</arg>
+<arg>${PALAVRAS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-14T15:56:45.860306" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-14T15:56:40.324115" elapsed="5.536191"/>
+</kw>
+<kw name="Então o ultimo post deve ter a tag em alta buscada" owner="home_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-14T15:56:48.866609" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-14T15:56:45.865837" elapsed="3.000772"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${TEXTO-POSTAGEM}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-03-13T14:52:42.801896" elapsed="0.327606"/>
+<status status="PASS" start="2024-03-14T15:56:48.866609" elapsed="0.325288"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:43.201668" level="INFO">${GET-TEXTO} = #bmwm5f90 #m5 #bmwm5 #bmwinsta #bmwgram #bmwclub #fireworks #bmwperformance #bmwmpower #f80 #bmwnation #bmw #bmwpower #v8 #wow #lights #beautiful #perspective #iconic #gorgeous #vibes #love #cars #car...</msg>
-<var>${GET-TEXTO}</var>
-<arg>${TEXTO-POSTAGEM}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-13T14:52:43.129502" elapsed="0.072166"/>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-03-14T15:56:49.196056" level="INFO">Length is 2.</msg>
+<msg time="2024-03-14T15:56:49.196056" level="INFO">${TAMANHO-LISTA} = 2</msg>
+<var>${TAMANHO-LISTA}</var>
+<arg>${STRING-BUSCA}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-03-14T15:56:49.191897" elapsed="0.004159"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${GET-TEXTO}</arg>
+<arg>${STRING-BUSCA}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-03-13T14:52:43.201668" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-14T15:56:49.196056" elapsed="0.000000"/>
 </kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-13T14:52:43.291597" level="INFO">Element '//*[@data-testid="tweetText"]' contains text 'v8'.</msg>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-14T15:56:49.251243" level="INFO">${GET-TEXTO-POSTAGEM} = “elizabeth olsen stars in upcoming romcom—”</msg>
+<var>${GET-TEXTO-POSTAGEM}</var>
 <arg>${TEXTO-POSTAGEM}</arg>
-<arg>v8</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-03-13T14:52:43.201668" elapsed="0.089929"/>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-14T15:56:49.196056" elapsed="0.055187"/>
 </kw>
-<status status="PASS" start="2024-03-13T14:52:40.550123" elapsed="2.741474"/>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-14T15:56:49.609099" level="INFO">Element '//*[@data-testid="tweetText"]' contains text 'Elizabeth'.</msg>
+<arg>${TEXTO-POSTAGEM}</arg>
+<arg>${STRING-BUSCA}[${counter}]</arg>
+<arg>ignore_case=True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-14T15:56:49.251243" elapsed="0.358368"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${GET-TEXTO-POSTAGEM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-14T15:56:49.610628" elapsed="0.007081"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${STRING-BUSCA}[${counter}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-14T15:56:49.620724" elapsed="0.093192"/>
+</kw>
+<var name="${counter}">0</var>
+<status status="PASS" start="2024-03-14T15:56:49.251243" elapsed="0.466691"/>
+</iter>
+<iter>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-14T15:56:49.774017" level="INFO">Element '//*[@data-testid="tweetText"]' contains text 'Olsen'.</msg>
+<arg>${TEXTO-POSTAGEM}</arg>
+<arg>${STRING-BUSCA}[${counter}]</arg>
+<arg>ignore_case=True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-14T15:56:49.718485" elapsed="0.056207"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${GET-TEXTO-POSTAGEM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-14T15:56:49.775208" elapsed="0.137690"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${STRING-BUSCA}[${counter}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-14T15:56:49.916416" elapsed="0.000000"/>
+</kw>
+<var name="${counter}">1</var>
+<status status="PASS" start="2024-03-14T15:56:49.718485" elapsed="0.197931"/>
+</iter>
+<var>${counter}</var>
+<value>0</value>
+<value>${TAMANHO-LISTA}</value>
+<status status="PASS" start="2024-03-14T15:56:49.251243" elapsed="0.665173"/>
+</for>
+<status status="PASS" start="2024-03-14T15:56:45.860306" elapsed="4.056110"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-13T14:52:45.307966" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-14T15:56:51.940738" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-13T14:52:43.307585" elapsed="2.000381"/>
+<status status="PASS" start="2024-03-14T15:56:49.933175" elapsed="2.010851"/>
 </kw>
 <kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-13T14:52:45.311758" elapsed="2.647301"/>
+<status status="PASS" start="2024-03-14T15:56:51.946526" elapsed="2.814232"/>
 </kw>
-<status status="PASS" start="2024-03-13T14:52:45.311758" elapsed="2.647301"/>
+<status status="PASS" start="2024-03-14T15:56:51.945754" elapsed="2.815004"/>
 </kw>
-<status status="PASS" start="2024-03-13T14:52:30.527074" elapsed="17.431985"/>
+<status status="PASS" start="2024-03-14T15:56:30.603995" elapsed="24.156763"/>
 </test>
-<status status="PASS" start="2024-03-13T14:52:29.537042" elapsed="18.429698"/>
+<status status="PASS" start="2024-03-14T15:56:29.627696" elapsed="25.143672"/>
 </suite>
 <statistics>
 <total>

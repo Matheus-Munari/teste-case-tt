@@ -80,3 +80,21 @@ Verificar se o usuario consegue buscar uma hashtag
     E pesquisar uma hashtag na barra de pesquisa 
     Então a primeira postagem deve conter a hashtag procurada
     Sleep    2s
+
+Verificar se o usuario consegue buscar uma palavra chave
+    Quando o usuario tentar entrar com as credenciais corretas
+    E pesquisar uma palavra chave na barra de pesquisa
+    Então a primeira postagem deve conter a palavra chave procurada
+
+Verificar se o usuario consegue realizar uma busca apenas por postagens em ingles
+    Quando o usuario tentar entrar com as credenciais corretas
+    E pesquisar uma palavra chave na barra de pesquisa
+    E abre o menu de pesquisa avancada
+    E seleciona a opcao ingles na busca por idioma
+    Então o primeiro post deve estar em ingles
+
+Verificar se o usuario consegue buscar por postagens em alta
+    Quando o usuario tentar entrar com as credenciais corretas
+    E clica em uma tag que esta em alta
+    Então o ultimo post deve ter a tag em alta buscada
+    Sleep    2s
