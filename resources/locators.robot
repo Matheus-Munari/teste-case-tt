@@ -64,3 +64,10 @@ ${INPUT-BUSCA}    //input[@data-testid="SearchBox_Search_Input"]
 ${TAG-EM-ALTA}    //*[@data-testid="trend"]
 ${POST-CONTEM}    
 ${STRING-BUSCA}
+${BOTAO-FECHAR-POST}    //*[@data-testid="app-bar-close"]
+${BOTAO-SALVAR-RASCUNHO}    //*[@data-testid="confirmationSheetConfirm"]
+${ULTIMO-RASCUNHO}    //*[@data-testid="unsentTweet"]
+${BOTAO-RASCUNHOS}    //*[@data-testid="unsentButton"]
+${BOTAO-SALVAR}    //*[@data-testid="bookmark"]
+${POST-BOOKMARK}    
+

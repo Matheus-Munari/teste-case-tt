@@ -153,7 +153,6 @@ E pesquisar uma palavra chave na barra de pesquisa
 
 Então a primeira postagem deve conter a palavra chave procurada
     Wait Until Element Is Visible    ${BOTAO-ULTIMAS-PESQUISA}
-    Sleep    15s
     Scroll Element Into View    ${TEXTO-POSTAGEM}
     ${GET-TEXTO}    Get Text    ${TEXTO-POSTAGEM}
     Log To Console    ${GET-TEXTO}
@@ -205,4 +204,51 @@ Então o ultimo post deve ter a tag em alta buscada
         #Log To Console    ${GET-TEXTO-POSTAGEM}
         #Log To Console    ${STRING-BUSCA}[${counter}]
     END    
+
+E digita 280 caracteres
+    Sleep    1s
+    Press Keys    none     Teste de limite de caracteres (280)
+    FOR    ${counter}    IN RANGE    0    245  
+        Press Keys    none     l
         
+    END     
+
+Então o botao de postar deve estar habilitado, possibilitando a postagem
+    Element Attribute Value Should Be    ${BOTAO-POSTAR}    tabindex    0  
+
+E digita 281 caracteres
+    Sleep    1s
+    Press Keys    none     Teste de limite de caracteres (281)
+    FOR    ${counter}    IN RANGE    0    246  
+        Press Keys    none     l
+        
+    END 
+
+Então o botao de postar deve estar desabilitado, impossibilitando a postagem
+    Element Attribute Value Should Be    ${BOTAO-POSTAR}    aria-disabled    true
+
+E cancelar o envio do post
+    Click Element    ${BOTAO-FECHAR-POST}
+
+E salvar o post nos rascunhos
+    Wait Until Element Is Visible    ${BOTAO-SALVAR-RASCUNHO}
+    Click Element    ${BOTAO-SALVAR-RASCUNHO}
+
+Então o post salvo deve estar na parte de rascunhos 
+    Wait Until Element Is Visible    ${BOTAO-RASCUNHOS}
+    Click Element    ${BOTAO-RASCUNHOS}
+    Wait Until Element Is Visible    ${ULTIMO-RASCUNHO}
+    Click Element    ${ULTIMO-RASCUNHO}
+    Element Should Contain    ${AREA-POSTAGEM}    ${MENSAGEM-POST}
+
+E salva a postagem
+    Wait Until Element Is Visible    ${BOTAO-SALVAR}
+    Click Element    ${BOTAO-SALVAR}
+
+E vai até a pagina de posts salvos
+    Click Element    ${BOTAO-MAIS-MENU}
+    Wait Until Element Is Visible    ${BOTAO-BOOKMARKS}
+    Click Element    ${BOTAO-BOOKMARKS}
+    Wait Until Element is Visible    ${ULTIMO-POST} 
+    Click Element    ${TEXTO-POSTAGEM}
+    Element Should Contain    ${ULTIMO-POST}    ${MENSAGEM-POST}
