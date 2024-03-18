@@ -70,4 +70,6 @@ ${ULTIMO-RASCUNHO}    //*[@data-testid="unsentTweet"]
 ${BOTAO-RASCUNHOS}    //*[@data-testid="unsentButton"]
 ${BOTAO-SALVAR}    //*[@data-testid="bookmark"]
 ${POST-BOOKMARK}    
+${BOTAO-CITAÇÃO}    //*[@href="/compose/post"]
+${BOTAO-REPLY}    //*[@data-testid="reply"]
 

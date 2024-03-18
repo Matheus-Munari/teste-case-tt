@@ -39,7 +39,7 @@ Verificar se o usuario fazer uma postagem com 280 caracteres
     E digita 280 caracteres
     Então o botao de postar deve estar habilitado, possibilitando a postagem
     
-Verificar se o usuario consegue fazer uma postegm com 281 caracteres
+Verificar se o usuario consegue fazer uma postegm com mais de 280 caracteres
     [Tags]    Postagem
     Quando o usuario tentar entrar com as credenciais corretas
     E clicar no botão de nova postagem 
@@ -111,6 +111,33 @@ Verificar se o usuario consegue salvar uma postagem
     E salva a postagem
     E vai até a pagina de posts salvos
     Sleep    4s
+
+Verificar se o ususario consegue citar uma postagem
+    [Tags]    Interacao
+    Quando o usuario tentar entrar com as credenciais corretas
+    E clicar no botão de nova postagem
+    E escrever uma nova postagem
+    E clicar no botao de postar
+    Sleep    2s
+    E vai até o seu perfil
+    E clica na ultima postagem 
+    E escreve uma citação para o post
+    E vai até o seu perfil
+    #E clica na ultima postagem
+    Então o ultimo post deve conter a mensagem citada
+
+Verificar se o usuario consegue responder a uma postagem
+    [Tags]    Interacao
+    Quando o usuario tentar entrar com as credenciais corretas
+    E clicar no botão de nova postagem
+    E escrever uma nova postagem
+    E clicar no botao de postar
+    E vai até o seu perfil
+    E clica na ultima postagem
+    E clica no botao de resposta
+    E escrever uma resposta
+    Então deverá aparecer uma notificação confirmando a postagem
+    Sleep    2s
 
 # Funcionalidade pesquisar
 Verificar se o usuário consegue buscar um usuario na barra de pesquisa

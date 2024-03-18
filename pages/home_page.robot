@@ -252,3 +252,25 @@ E vai até a pagina de posts salvos
     Wait Until Element is Visible    ${ULTIMO-POST} 
     Click Element    ${TEXTO-POSTAGEM}
     Element Should Contain    ${ULTIMO-POST}    ${MENSAGEM-POST}
+
+E escreve uma citação para o post
+    Wait Until Element Is Visible    ${BOTAO-RETWEET-ANTES}
+    Click Element    ${BOTAO-RETWEET-ANTES}
+    Wait Until Element Is Visible    ${BOTAO-CITAÇÃO}
+    Click Element    ${BOTAO-CITAÇÃO}
+    Wait Until Element Is Visible    ${BOTAO-POSTAR}
+    Press Keys    none    Teste de citação
+    Click Element    ${BOTAO-POSTAR}
+
+Então o ultimo post deve conter a mensagem citada
+    Sleep    2s
+    Element Should Contain    ${ULTIMO-POST}    Teste de citação
+
+E clica no botao de resposta
+    Wait Until Element Is Visible    ${BOTAO-REPLY}
+    Click Element    ${BOTAO-REPLY}
+
+E escrever uma resposta
+    Wait Until Element Is Visible    ${BOTAO-POSTAR}
+    Press Keys    none    Teste de resposta 
+    Click Element    ${BOTAO-POSTAR}
