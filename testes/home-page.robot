@@ -7,12 +7,6 @@ Test Teardown    Fechar navegador
 
 *** Test Cases ***
 
-Verificar se o usuário consegue enviar mensagens diretas a outros usuários
-    Quando o usuario tentar entrar com as credenciais corretas
-    E clica no icone de mensagens
-    E envia uma nova mensagem
-    Então a mensagem enviada deve constar na conversa
-
 #Funcionalidade postar
 
 Verificar se o usuario consegue postar uma foto
@@ -174,3 +168,60 @@ Verificar se o usuario consegue buscar por postagens em alta
     E clica em uma tag que esta em alta
     Então o ultimo post deve ter a tag em alta buscada
     Sleep    2s
+
+Verificar se o usuário consegue buscar um usuario na barra de pesquisa
+    [Tags]    Pesquisar
+    Quando o usuario tentar entrar com as credenciais corretas
+    E insere um nome de usuário na barra de pesquisa
+    E confirma a busca
+    Então o usuário buscado deve aparecer no topo da página
+
+Verificar se o usuário consegue enviar mensagens diretas a outros usuários
+    [Tags]    Mensagem
+    Quando o usuario tentar entrar com as credenciais corretas
+    E clica no icone de mensagens
+    E clica na conversa
+    E envia uma nova mensagem
+    Então a mensagem enviada deve constar na conversa
+
+Verificar se o usuario consegue reagir a uma mensagem
+    [Tags]    Mensagem
+    Quando o usuario tentar entrar com as credenciais corretas
+    E clica no icone de mensagens
+    E clica na conversa
+    E envia uma nova mensagem
+    E reage a mensagem
+    
+Verificar se o usuario consegue mandar imagens pela mensagem direta
+    [Tags]    Mensagem
+    Quando o usuario tentar entrar com as credenciais corretas
+    E clica no icone de mensagens
+    E clica na conversa
+    E adicione uma foto a ser mandada
+    Então a mensagem enviada deve constar na conversa
+
+Verificar se o usuario consegue mandar GIFS pela mensagem direta
+    [Tags]    Mensagem 
+    Quando o usuario tentar entrar com as credenciais corretas
+    E clica no icone de mensagens
+    E clica na conversa
+    E adiciona um gif para mandar
+    E envia uma nova mensagem
+    Então a mensagem enviada deve constar na conversa
+
+Verificar se o usuario consegue silenciar uma conversa
+    [Tags]    Mensagem
+    Quando o usuario tentar entrar com as credenciais corretas
+    E clica no icone de mensagens
+    E clica em mais opções da conversa
+    E clica em silenciar a conversa
+    E clica em mais opções da conversa
+    Então a conversa deve estar silenciada
+
+Verificar se o usuario consegue receber novas mensagens
+    [Tags]    Mensagem
+    Quando o usuario tentar entrar com as credenciais corretas
+    E clica no icone de mensagens
+    E clica na conversa
+    E adicione uma foto a ser mandada
+    Então a mensagem enviada deve constar na conversa

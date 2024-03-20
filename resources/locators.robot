@@ -72,4 +72,12 @@ ${BOTAO-SALVAR}    //*[@data-testid="bookmark"]
 ${POST-BOOKMARK}    
 ${BOTAO-CITAÇÃO}    //*[@href="/compose/post"]
 ${BOTAO-REPLY}    //*[@data-testid="reply"]
+${BOTAO-REAGIR}    //div[@aria-label="Add reaction"]
+${BOTAO-ENVIAR-DM}    //*[@data-testid="dmComposerSendButton"]
+${BOTAO-ADICIONAR-GIF}    //*[@aria-label="Add a GIF"]
+${GIF}    //*[@data-testid="gifSearchGifImage"]
+${BOTAO-SCROLL}    //*[@data-testid="DmScrollToNewestButton"]
+${BOTAO-MAIS-CONVERSA}    //*[@data-testid="conversation"]//*[@aria-label="More"]
+${BOTAO-SILENCIAR-CONVERSA}    //*[text()="Snooze conversation"]
+${BOTAO-TIRAR-SILENCIADA}    //*[text()="Take conversation off snooze"]
 

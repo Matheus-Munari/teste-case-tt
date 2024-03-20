@@ -1,1395 +1,2335 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-03-18T11:40:49.794561" rpa="false" schemaversion="5">
-<suite id="s1" name="Home-Page" source="C:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\testes\home-page.robot">
-<test id="s1-t1" name="Verificar se o usuario consegue excluir uma postagem" line="68">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-03-19T13:18:29.058879" rpa="false" schemaversion="5">
+<suite id="s1" name="Home-Page &amp; Teste-Case-Tt">
+<suite id="s1-s1" name="Home-Page" source="C:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\testes\home-page.robot">
+<test id="s1-s1-t1" name="Verificar se o usuário consegue enviar mensagens diretas a outros usuários" line="172">
 <kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:40:50.750042" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<msg time="2024-03-19T13:18:30.314642" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-18T11:40:50.750042" elapsed="3.624558"/>
+<status status="PASS" start="2024-03-19T13:18:30.314642" elapsed="3.552901"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-18T11:40:54.374600" elapsed="0.303319"/>
+<status status="PASS" start="2024-03-19T13:18:33.867543" elapsed="0.133052"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:40:50.750042" elapsed="3.927877"/>
+<status status="PASS" start="2024-03-19T13:18:30.314642" elapsed="3.685953"/>
 </kw>
 <kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:40:54.677919" elapsed="0.154779"/>
+<status status="PASS" start="2024-03-19T13:18:34.000595" elapsed="0.458967"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-03-18T11:40:54.832698" elapsed="0.309969"/>
+<status status="PASS" start="2024-03-19T13:18:34.459562" elapsed="0.350234"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:40:55.143048" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<msg time="2024-03-19T13:18:34.810821" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:40:55.143048" elapsed="0.092841"/>
+<status status="PASS" start="2024-03-19T13:18:34.809796" elapsed="0.119398"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${INPUT-USER}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-03-18T11:40:55.235889" elapsed="1.166622"/>
+<status status="PASS" start="2024-03-19T13:18:34.929194" elapsed="1.217132"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:40:56.402511" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<msg time="2024-03-19T13:18:36.146326" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
 <arg>${INPUT-USER}</arg>
 <arg>${USUARIO-CORRETO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:40:56.402511" elapsed="0.238216"/>
+<status status="PASS" start="2024-03-19T13:18:36.146326" elapsed="0.226261"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:40:56.640727" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<msg time="2024-03-19T13:18:36.372587" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
 <arg>${BOTAO-AVANCAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:40:56.640727" elapsed="0.074767"/>
+<status status="PASS" start="2024-03-19T13:18:36.372587" elapsed="0.070985"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${INPUT-SENHA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:40:56.715494" elapsed="0.495752"/>
+<status status="PASS" start="2024-03-19T13:18:36.444419" elapsed="0.473828"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:40:57.211246" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<msg time="2024-03-19T13:18:36.918247" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
 <arg>${INPUT-SENHA}</arg>
 <arg>${SENHA-CORRETA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:40:57.211246" elapsed="0.139586"/>
+<status status="PASS" start="2024-03-19T13:18:36.918247" elapsed="0.177936"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:40:57.350832" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<msg time="2024-03-19T13:18:37.096183" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
 <arg>${BOTAO-LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:40:57.350832" elapsed="0.066787"/>
+<status status="PASS" start="2024-03-19T13:18:37.096183" elapsed="0.074131"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ELEMENTO-NOTIFICACOES}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:40:57.417619" elapsed="2.642819"/>
+<status status="PASS" start="2024-03-19T13:18:37.170314" elapsed="2.689437"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:40:54.677919" elapsed="5.382519"/>
+<status status="PASS" start="2024-03-19T13:18:34.000595" elapsed="5.859156"/>
 </kw>
-<kw name="E vai até o seu perfil" owner="home_page">
+<kw name="E clica no icone de mensagens" owner="home_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PERFIL}</arg>
+<arg>${BOTAO-MENSAGENS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:00.060438" elapsed="0.189565"/>
+<status status="PASS" start="2024-03-19T13:18:39.865728" elapsed="0.166556"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:00.250003" level="INFO">Clicking element '//*[@href="/usuariomatteste"]'.</msg>
-<arg>${PERFIL}</arg>
+<msg time="2024-03-19T13:18:40.032284" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:00.250003" elapsed="0.116641"/>
+<status status="PASS" start="2024-03-19T13:18:40.032284" elapsed="0.124292"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:41:00.060438" elapsed="0.306206"/>
+<status status="PASS" start="2024-03-19T13:18:39.865728" elapsed="0.291038"/>
 </kw>
-<kw name="E clica na ultima postagem" owner="home_page">
+<kw name="E clica na conversa" owner="home_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ULTIMO-POST}</arg>
+<arg>${CONVERSA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:00.367655" elapsed="1.354297"/>
+<status status="PASS" start="2024-03-19T13:18:40.158280" elapsed="0.905312"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:01.722987" level="INFO">Clicking element '//*[@data-testid="tweet"]'.</msg>
-<arg>${ULTIMO-POST}</arg>
+<msg time="2024-03-19T13:18:41.063592" level="INFO">Clicking element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:01.721952" elapsed="0.123703"/>
+<status status="PASS" start="2024-03-19T13:18:41.063592" elapsed="0.110408"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:41:00.367655" elapsed="1.478000"/>
+<status status="PASS" start="2024-03-19T13:18:40.156766" elapsed="1.017234"/>
 </kw>
-<kw name="E abre as opções do post" owner="home_page">
+<kw name="E envia uma nova mensagem" owner="home_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-OPCAO-POST}</arg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:01.845655" elapsed="0.312149"/>
+<status status="PASS" start="2024-03-19T13:18:41.176638" elapsed="0.339103"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:02.157804" level="INFO">Clicking element '//div[@data-testid="primaryColumn"]//*[contains(@aria-label, "More")]'.</msg>
-<arg>${BOTAO-OPCAO-POST}</arg>
+<msg time="2024-03-19T13:18:41.515741" level="INFO">Clicking element '//*[@data-testid="dmComposerTextInput_label"]'.</msg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:02.157804" elapsed="0.272958"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:01.845655" elapsed="0.585660"/>
-</kw>
-<kw name="E clica no botão delete" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-DELETE-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:02.431315" elapsed="0.085864"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:02.518695" level="INFO">Clicking element '//*[text()="Delete"]'.</msg>
-<arg>${BOTAO-DELETE-POST}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:02.517179" elapsed="0.135935"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:02.431315" elapsed="0.221799"/>
-</kw>
-<kw name="E confirmar a exclusão do post" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-DELETE-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:02.653829" elapsed="0.037627"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:02.691456" level="INFO">Clicking element '//*[text()="Delete"]'.</msg>
-<arg>${BOTAO-DELETE-POST}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:02.691456" elapsed="0.390681"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:02.653829" elapsed="0.428308"/>
-</kw>
-<kw name="Então deverá aparecer uma notificação confirmando a exclusão" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${NOTIFICACAO-DELETE-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:03.084154" elapsed="0.601158"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:03.711013" level="INFO">Element '//*[text()="Your post was deleted"]' is displayed.</msg>
-<arg>${NOTIFICACAO-DELETE-POST}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:03.685312" elapsed="0.025701"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-18T11:41:05.711438" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-18T11:41:03.711013" elapsed="2.000425"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:03.082137" elapsed="2.629301"/>
-</kw>
-<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-18T11:41:05.711438" elapsed="2.590061"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:05.711438" elapsed="2.590575"/>
-</kw>
-<tag>Interacao</tag>
-<status status="PASS" start="2024-03-18T11:40:50.750042" elapsed="17.551971"/>
-</test>
-<test id="s1-t2" name="Verificar se o usuario consegue curtir uma postagem" line="78">
-<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:08.302013" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-18T11:41:08.302013" elapsed="3.495742"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-18T11:41:11.798784" elapsed="0.116836"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:08.302013" elapsed="3.619921"/>
-</kw>
-<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:11.921934" elapsed="0.489191"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-03-18T11:41:12.411125" elapsed="0.329130"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:12.743767" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:12.740255" elapsed="0.156833"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${INPUT-USER}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-03-18T11:41:12.897088" elapsed="0.959033"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:13.856121" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
-<arg>${INPUT-USER}</arg>
-<arg>${USUARIO-CORRETO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:13.856121" elapsed="0.272722"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:14.128843" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
-<arg>${BOTAO-AVANCAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:14.128843" elapsed="0.073615"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT-SENHA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:14.202458" elapsed="0.469844"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:14.672302" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
-<arg>${INPUT-SENHA}</arg>
-<arg>${SENHA-CORRETA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:14.672302" elapsed="0.167574"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:14.839876" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
-<arg>${BOTAO-LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:14.839876" elapsed="0.071979"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENTO-NOTIFICACOES}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:14.914326" elapsed="3.096653"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:11.921934" elapsed="6.089045"/>
-</kw>
-<kw name="E clicar no botão de nova postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-NOVA-POSTAGEM}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:18.010979" elapsed="0.123282"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:18.134261" level="INFO">Clicking element '//*[@href="/compose/post"]'.</msg>
-<arg>${BOTAO-NOVA-POSTAGEM}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:18.134261" elapsed="0.152587"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:18.010979" elapsed="0.275869"/>
-</kw>
-<kw name="E escrever uma nova postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:18.286848" elapsed="0.984315"/>
+<status status="PASS" start="2024-03-19T13:18:41.515741" elapsed="0.210065"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:19.272537" level="INFO">Executing JavaScript:
+<msg time="2024-03-19T13:18:41.727863" level="INFO">Executing JavaScript:
 return new Date().toLocaleString()
 Without any arguments.</msg>
-<msg time="2024-03-18T11:41:19.284137" level="INFO">${DATA-HORA} = 18/03/2024, 11:41:19</msg>
+<msg time="2024-03-19T13:18:41.736308" level="INFO">${DATA-HORA} = 19/03/2024, 13:18:41</msg>
 <var>${DATA-HORA}</var>
 <arg>return new Date().toLocaleString()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-03-18T11:41:19.272537" elapsed="0.011600"/>
+<status status="PASS" start="2024-03-19T13:18:41.725806" elapsed="0.010502"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-18T11:41:19.287153" level="INFO">${MENSAGEM-POST} = Teste de nova postagem. Data e hora:18/03/2024, 11:41:19</msg>
-<arg>${MENSAGEM-POST}</arg>
-<arg>Teste de nova postagem. Data e hora:${DATA-HORA}</arg>
+<msg time="2024-03-19T13:18:41.736308" level="INFO">${MENSAGEM-TESTE} = Teste de nova mensagem. Data e hora:19/03/2024, 13:18:41</msg>
+<arg>${MENSAGEM-TESTE}</arg>
+<arg>Teste de nova mensagem. Data e hora:${DATA-HORA}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-18T11:41:19.287153" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-19T13:18:41.736308" elapsed="0.000000"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-18T11:41:19.288968" level="INFO">${ULTIMA-POSTAGEM} = //*[text()="Teste de nova postagem. Data e hora:18/03/2024, 11:41:19"]</msg>
-<arg>${ULTIMA-POSTAGEM}</arg>
-<arg>//*[text()="${MENSAGEM-POST}"]</arg>
+<msg time="2024-03-19T13:18:41.742252" level="INFO">${ULTIMA-MENSAGEM} = //div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:18:41"]</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<arg>//div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-18T11:41:19.288320" elapsed="0.000648"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:19.290280" level="INFO">Typing text 'Teste de nova postagem. Data e hora:18/03/2024, 11:41:19' into text field '//*[@data-testid="tweetTextarea_0"]'.</msg>
-<arg>${AREA-POSTAGEM}</arg>
-<arg>${MENSAGEM-POST}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:19.288968" elapsed="1.421309"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:18.286848" elapsed="2.423429"/>
-</kw>
-<kw name="E clicar no botao de postar" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:20.712659" elapsed="0.034736"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:20.754632" level="INFO">Clicking element '//*[@data-testid="tweetButton"]'.</msg>
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:20.747395" elapsed="0.169823"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:20.710277" elapsed="0.206941"/>
-</kw>
-<kw name="E vai até o seu perfil" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PERFIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:20.921744" elapsed="0.056716"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:20.978460" level="INFO">Clicking element '//*[@href="/usuariomatteste"]'.</msg>
-<arg>${PERFIL}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:20.978460" elapsed="0.818579"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:20.917218" elapsed="0.879821"/>
-</kw>
-<kw name="E clica na ultima postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ULTIMO-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:21.797039" elapsed="1.137243"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:22.934282" level="INFO">Clicking element '//*[@data-testid="tweet"]'.</msg>
-<arg>${ULTIMO-POST}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:22.934282" elapsed="0.390152"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:21.797039" elapsed="1.527395"/>
-</kw>
-<kw name="E curta uma postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-CURTIR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:23.335201" elapsed="0.340340"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:23.675541" level="INFO">Clicking element '//div[@data-testid="like"]'.</msg>
-<arg>${BOTAO-CURTIR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:23.675541" elapsed="0.169689"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:23.334972" elapsed="0.510258"/>
-</kw>
-<kw name="E vai até o seu perfil" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PERFIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:23.845230" elapsed="0.082758"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:23.927988" level="INFO">Clicking element '//*[@href="/usuariomatteste"]'.</msg>
-<arg>${PERFIL}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:23.927988" elapsed="0.320201"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:23.845230" elapsed="0.402959"/>
-</kw>
-<kw name="E vai ate a aba de likes" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ABA-LIKES}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:24.255195" elapsed="0.257934"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:24.513129" level="INFO">Clicking element '//*[@href="/usuariomatteste/likes"]'.</msg>
-<arg>${ABA-LIKES}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:24.513129" elapsed="0.417115"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:24.248189" elapsed="0.682055"/>
-</kw>
-<kw name="E clica na ultima postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ULTIMO-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:24.930244" elapsed="0.525019"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:25.455263" level="INFO">Clicking element '//*[@data-testid="tweet"]'.</msg>
-<arg>${ULTIMO-POST}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:25.455263" elapsed="0.253963"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:24.930244" elapsed="0.787125"/>
-</kw>
-<kw name="E verifica se a postagem curtida esta la" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ULTIMA-POSTAGEM}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:25.717369" elapsed="0.239559"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:26.052855" level="INFO">Element '//*[text()="Teste de nova postagem. Data e hora:18/03/2024, 11:41:19"]' is displayed.</msg>
-<arg>${ULTIMA-POSTAGEM}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:25.956928" elapsed="0.095927"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:25.717369" elapsed="0.338145"/>
-</kw>
-<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-18T11:41:26.055514" elapsed="3.675861"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:26.055514" elapsed="3.675861"/>
-</kw>
-<tag>Interacao</tag>
-<status status="PASS" start="2024-03-18T11:41:08.302013" elapsed="21.429362"/>
-</test>
-<test id="s1-t3" name="Verificar se o usuario consegue repostar uma postagem" line="92">
-<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:29.731375" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-18T11:41:29.731375" elapsed="3.545411"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-18T11:41:33.276786" elapsed="0.119629"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:29.731375" elapsed="3.665040"/>
-</kw>
-<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:33.400917" elapsed="0.398588"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-03-18T11:41:33.799505" elapsed="0.365786"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:34.165291" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:34.165291" elapsed="0.097840"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${INPUT-USER}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-03-18T11:41:34.264420" elapsed="1.186781"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:35.451201" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
-<arg>${INPUT-USER}</arg>
-<arg>${USUARIO-CORRETO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:35.451201" elapsed="0.243992"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:35.695193" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
-<arg>${BOTAO-AVANCAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:35.695193" elapsed="0.096909"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT-SENHA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:35.792102" elapsed="0.520092"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:36.312194" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
-<arg>${INPUT-SENHA}</arg>
-<arg>${SENHA-CORRETA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:36.312194" elapsed="0.138612"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:36.450806" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
-<arg>${BOTAO-LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:36.450806" elapsed="0.064648"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENTO-NOTIFICACOES}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:36.515454" elapsed="2.871471"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:33.396415" elapsed="5.990510"/>
-</kw>
-<kw name="E clicar no botão de nova postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-NOVA-POSTAGEM}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:39.386925" elapsed="0.150716"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:39.538293" level="INFO">Clicking element '//*[@href="/compose/post"]'.</msg>
-<arg>${BOTAO-NOVA-POSTAGEM}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:39.537641" elapsed="0.145268"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:39.386925" elapsed="0.296305"/>
-</kw>
-<kw name="E escrever uma nova postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:39.683542" elapsed="0.302389"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:39.985931" level="INFO">Executing JavaScript:
-return new Date().toLocaleString()
-Without any arguments.</msg>
-<msg time="2024-03-18T11:41:40.005145" level="INFO">${DATA-HORA} = 18/03/2024, 11:41:40</msg>
-<var>${DATA-HORA}</var>
-<arg>return new Date().toLocaleString()</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-03-18T11:41:39.985931" elapsed="0.019214"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-18T11:41:40.017673" level="INFO">${MENSAGEM-POST} = Teste de nova postagem. Data e hora:18/03/2024, 11:41:40</msg>
-<arg>${MENSAGEM-POST}</arg>
-<arg>Teste de nova postagem. Data e hora:${DATA-HORA}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-18T11:41:40.017673" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-18T11:41:40.017673" level="INFO">${ULTIMA-POSTAGEM} = //*[text()="Teste de nova postagem. Data e hora:18/03/2024, 11:41:40"]</msg>
-<arg>${ULTIMA-POSTAGEM}</arg>
-<arg>//*[text()="${MENSAGEM-POST}"]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-18T11:41:40.017673" elapsed="0.000000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:40.019820" level="INFO">Typing text 'Teste de nova postagem. Data e hora:18/03/2024, 11:41:40' into text field '//*[@data-testid="tweetTextarea_0"]'.</msg>
-<arg>${AREA-POSTAGEM}</arg>
-<arg>${MENSAGEM-POST}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:40.017673" elapsed="1.745103"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:39.683542" elapsed="2.079234"/>
-</kw>
-<kw name="E clicar no botao de postar" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:41.768087" elapsed="0.583437"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:42.351524" level="INFO">Clicking element '//*[@data-testid="tweetButton"]'.</msg>
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:42.351524" elapsed="0.174304"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:41.768087" elapsed="0.757741"/>
-</kw>
-<kw name="E vai até o seu perfil" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PERFIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:42.525828" elapsed="0.090235"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:42.616063" level="INFO">Clicking element '//*[@href="/usuariomatteste"]'.</msg>
-<arg>${PERFIL}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:42.616063" elapsed="1.041922"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:42.525828" elapsed="1.132157"/>
-</kw>
-<kw name="E clica na ultima postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ULTIMO-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:43.660306" elapsed="1.394227"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:45.054533" level="INFO">Clicking element '//*[@data-testid="tweet"]'.</msg>
-<arg>${ULTIMO-POST}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:45.054533" elapsed="0.150607"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:43.657985" elapsed="1.547155"/>
-</kw>
-<kw name="E reposte esse post" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-RETWEET-ANTES}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:45.211942" elapsed="0.304082"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:45.516024" level="INFO">Clicking element '//*[@data-testid="retweet"]'.</msg>
-<arg>${BOTAO-RETWEET-ANTES}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:45.516024" elapsed="0.169978"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-CONFIRMAR-RETWEET}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:45.686002" elapsed="0.073540"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:45.759542" level="INFO">Clicking element '//*[@data-testid="retweetConfirm"]'.</msg>
-<arg>${BOTAO-CONFIRMAR-RETWEET}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:45.759542" elapsed="0.121069"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:45.209816" elapsed="0.670795"/>
-</kw>
-<kw name="Então o botao de repostar deve mudar de cor, indicando a repostagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-RETWEET-DEPOIS}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:45.880611" elapsed="0.031544"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:45.956323" level="INFO">Element '//*[@data-testid="unretweet"]' is displayed.</msg>
-<arg>${BOTAO-RETWEET-DEPOIS}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:45.912155" elapsed="0.044168"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:45.880611" elapsed="0.076740"/>
-</kw>
-<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-18T11:41:45.958251" elapsed="2.584228"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:45.958251" elapsed="2.584228"/>
-</kw>
-<tag>Interacao</tag>
-<status status="PASS" start="2024-03-18T11:41:29.731375" elapsed="18.811626"/>
-</test>
-<test id="s1-t4" name="Verificar se o usuario consegue salvar uma postagem" line="103">
-<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:48.543001" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-18T11:41:48.543001" elapsed="3.615553"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-18T11:41:52.158554" elapsed="0.216529"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:48.543001" elapsed="3.832082"/>
-</kw>
-<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:52.375083" elapsed="0.369379"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-03-18T11:41:52.744462" elapsed="0.296240"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:53.040702" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:53.040702" elapsed="0.130640"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${INPUT-USER}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-03-18T11:41:53.173406" elapsed="1.182197"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:54.355603" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
-<arg>${INPUT-USER}</arg>
-<arg>${USUARIO-CORRETO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:54.355603" elapsed="0.256017"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:54.611620" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
-<arg>${BOTAO-AVANCAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:54.611620" elapsed="0.077670"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT-SENHA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:54.689290" elapsed="0.472250"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:55.161540" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
-<arg>${INPUT-SENHA}</arg>
-<arg>${SENHA-CORRETA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:55.161540" elapsed="0.147215"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:55.310797" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
-<arg>${BOTAO-LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:55.309766" elapsed="0.081542"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENTO-NOTIFICACOES}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:55.392772" elapsed="2.804287"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:52.375083" elapsed="5.821976"/>
-</kw>
-<kw name="E clicar no botão de nova postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-NOVA-POSTAGEM}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:58.197059" elapsed="0.036722"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:58.233781" level="INFO">Clicking element '//*[@href="/compose/post"]'.</msg>
-<arg>${BOTAO-NOVA-POSTAGEM}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:58.233781" elapsed="0.145183"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:58.197059" elapsed="0.182191"/>
-</kw>
-<kw name="E escrever uma nova postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:41:58.379250" elapsed="0.304257"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:58.689101" level="INFO">Executing JavaScript:
-return new Date().toLocaleString()
-Without any arguments.</msg>
-<msg time="2024-03-18T11:41:58.704333" level="INFO">${DATA-HORA} = 18/03/2024, 11:41:58</msg>
-<var>${DATA-HORA}</var>
-<arg>return new Date().toLocaleString()</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-03-18T11:41:58.688014" elapsed="0.016319"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-18T11:41:58.704333" level="INFO">${MENSAGEM-POST} = Teste de nova postagem. Data e hora:18/03/2024, 11:41:58</msg>
-<arg>${MENSAGEM-POST}</arg>
-<arg>Teste de nova postagem. Data e hora:${DATA-HORA}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-18T11:41:58.704333" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-18T11:41:58.704333" level="INFO">${ULTIMA-POSTAGEM} = //*[text()="Teste de nova postagem. Data e hora:18/03/2024, 11:41:58"]</msg>
-<arg>${ULTIMA-POSTAGEM}</arg>
-<arg>//*[text()="${MENSAGEM-POST}"]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-18T11:41:58.704333" elapsed="0.000000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:41:58.704333" level="INFO">Typing text 'Teste de nova postagem. Data e hora:18/03/2024, 11:41:58' into text field '//*[@data-testid="tweetTextarea_0"]'.</msg>
-<arg>${AREA-POSTAGEM}</arg>
-<arg>${MENSAGEM-POST}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:41:58.704333" elapsed="1.737761"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:41:58.379250" elapsed="2.062844"/>
-</kw>
-<kw name="E clicar no botao de postar" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:00.444178" elapsed="0.708527"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:01.154370" level="INFO">Clicking element '//*[@data-testid="tweetButton"]'.</msg>
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:01.152705" elapsed="0.184273"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:00.442094" elapsed="0.895574"/>
-</kw>
-<kw name="E vai até o seu perfil" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PERFIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:01.339466" elapsed="0.064885"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:01.404351" level="INFO">Clicking element '//*[@href="/usuariomatteste"]'.</msg>
-<arg>${PERFIL}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:01.404351" elapsed="0.902275"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:01.338202" elapsed="0.970892"/>
-</kw>
-<kw name="E clica na ultima postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ULTIMO-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:02.313228" elapsed="1.705517"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:04.021514" level="INFO">Clicking element '//*[@data-testid="tweet"]'.</msg>
-<arg>${ULTIMO-POST}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:04.018745" elapsed="0.265274"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:02.313228" elapsed="1.971032"/>
-</kw>
-<kw name="E salva a postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-SALVAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:04.287481" elapsed="0.301108"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:04.588589" level="INFO">Clicking element '//*[@data-testid="bookmark"]'.</msg>
-<arg>${BOTAO-SALVAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:04.588589" elapsed="0.180451"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:04.287481" elapsed="0.481559"/>
-</kw>
-<kw name="E vai até a pagina de posts salvos" owner="home_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:04.772478" level="INFO">Clicking element '//*[@data-testid="AppTabBar_More_Menu"]'.</msg>
-<arg>${BOTAO-MAIS-MENU}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:04.771541" elapsed="0.109327"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-BOOKMARKS}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:04.883329" elapsed="0.255364"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:05.139018" level="INFO">Clicking element '//*[@href="/i/bookmarks"]'.</msg>
-<arg>${BOTAO-BOOKMARKS}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:05.139018" elapsed="0.098222"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ULTIMO-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:05.237240" elapsed="0.751005"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:06.003190" level="INFO">Clicking element '//*[@data-testid="tweetText"]'.</msg>
-<arg>${TEXTO-POSTAGEM}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:06.003190" elapsed="0.287132"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:06.602134" level="INFO">Element '//*[@data-testid="tweet"]' contains text 'Teste de nova postagem. Data e hora:18/03/2024, 11:41:58'.</msg>
-<arg>${ULTIMO-POST}</arg>
-<arg>${MENSAGEM-POST}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-03-18T11:42:06.290322" elapsed="0.311812"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:04.769040" elapsed="1.833094"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-18T11:42:10.605221" level="INFO">Slept 4 seconds.</msg>
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-18T11:42:06.604671" elapsed="4.000550"/>
-</kw>
-<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-18T11:42:10.606339" elapsed="2.843885"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:10.606339" elapsed="2.843885"/>
-</kw>
-<tag>Interacao</tag>
-<status status="PASS" start="2024-03-18T11:41:48.543001" elapsed="24.907223"/>
-</test>
-<test id="s1-t5" name="Verificar se o ususario consegue citar uma postagem" line="115">
-<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:13.456042" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-18T11:42:13.456042" elapsed="3.643477"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-18T11:42:17.099519" elapsed="0.395814"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:13.450224" elapsed="4.045109"/>
-</kw>
-<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:17.495333" elapsed="0.185155"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-03-18T11:42:17.680488" elapsed="0.327269"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:18.008131" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
-<arg>${BOTAO-ENTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:18.008131" elapsed="0.137310"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${INPUT-USER}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-03-18T11:42:18.147389" elapsed="1.136418"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:19.283807" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
-<arg>${INPUT-USER}</arg>
-<arg>${USUARIO-CORRETO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:19.283807" elapsed="0.238033"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:19.521840" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
-<arg>${BOTAO-AVANCAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:19.521840" elapsed="0.086439"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT-SENHA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:19.608279" elapsed="0.487387"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:20.095666" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
-<arg>${INPUT-SENHA}</arg>
-<arg>${SENHA-CORRETA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:20.095666" elapsed="0.117660"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:20.213326" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
-<arg>${BOTAO-LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:20.213326" elapsed="0.057934"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENTO-NOTIFICACOES}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:20.271260" elapsed="2.655082"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:17.495333" elapsed="5.431009"/>
-</kw>
-<kw name="E clicar no botão de nova postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-NOVA-POSTAGEM}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:22.926342" elapsed="0.036086"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:22.972331" level="INFO">Clicking element '//*[@href="/compose/post"]'.</msg>
-<arg>${BOTAO-NOVA-POSTAGEM}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:22.962428" elapsed="0.171413"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:22.926342" elapsed="0.207499"/>
-</kw>
-<kw name="E escrever uma nova postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:23.133841" elapsed="0.358911"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:23.492752" level="INFO">Executing JavaScript:
-return new Date().toLocaleString()
-Without any arguments.</msg>
-<msg time="2024-03-18T11:42:23.508691" level="INFO">${DATA-HORA} = 18/03/2024, 11:42:23</msg>
-<var>${DATA-HORA}</var>
-<arg>return new Date().toLocaleString()</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-03-18T11:42:23.492752" elapsed="0.015939"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-18T11:42:23.508691" level="INFO">${MENSAGEM-POST} = Teste de nova postagem. Data e hora:18/03/2024, 11:42:23</msg>
-<arg>${MENSAGEM-POST}</arg>
-<arg>Teste de nova postagem. Data e hora:${DATA-HORA}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-18T11:42:23.508691" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-18T11:42:23.508691" level="INFO">${ULTIMA-POSTAGEM} = //*[text()="Teste de nova postagem. Data e hora:18/03/2024, 11:42:23"]</msg>
-<arg>${ULTIMA-POSTAGEM}</arg>
-<arg>//*[text()="${MENSAGEM-POST}"]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-18T11:42:23.508691" elapsed="0.000000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:23.508691" level="INFO">Typing text 'Teste de nova postagem. Data e hora:18/03/2024, 11:42:23' into text field '//*[@data-testid="tweetTextarea_0"]'.</msg>
-<arg>${AREA-POSTAGEM}</arg>
-<arg>${MENSAGEM-POST}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:23.508691" elapsed="1.700152"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:23.133841" elapsed="2.075002"/>
-</kw>
-<kw name="E clicar no botao de postar" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:25.208843" elapsed="0.594870"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:25.803713" level="INFO">Clicking element '//*[@data-testid="tweetButton"]'.</msg>
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:25.803713" elapsed="0.191946"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:25.208843" elapsed="0.786816"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-18T11:42:27.998603" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-18T11:42:25.997409" elapsed="2.001194"/>
-</kw>
-<kw name="E vai até o seu perfil" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PERFIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:27.998603" elapsed="0.034993"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:28.036988" level="INFO">Clicking element '//*[@href="/usuariomatteste"]'.</msg>
-<arg>${PERFIL}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:28.036988" elapsed="0.150111"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:27.998603" elapsed="0.188919"/>
-</kw>
-<kw name="E clica na ultima postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ULTIMO-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:28.187522" elapsed="1.173422"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:29.360944" level="INFO">Clicking element '//*[@data-testid="tweet"]'.</msg>
-<arg>${ULTIMO-POST}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:29.360944" elapsed="0.418745"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:28.187522" elapsed="1.592167"/>
-</kw>
-<kw name="E escreve uma citação para o post" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-RETWEET-ANTES}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:29.780997" elapsed="0.328521"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:30.109518" level="INFO">Clicking element '//*[@data-testid="retweet"]'.</msg>
-<arg>${BOTAO-RETWEET-ANTES}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:30.109518" elapsed="0.177568"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-CITAÇÃO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:30.287086" elapsed="0.031666"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:30.318752" level="INFO">Clicking element '//*[@href="/compose/post"]'.</msg>
-<arg>${BOTAO-CITAÇÃO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:30.318752" elapsed="0.204745"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:30.523497" elapsed="0.044665"/>
+<status status="PASS" start="2024-03-19T13:18:41.736308" elapsed="0.005944"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:30.568162" level="INFO">Sending key(s) ('Teste de citação',) to page.</msg>
-<msg time="2024-03-18T11:42:30.569470" level="INFO">Sending keys Teste de citação</msg>
-<arg>none</arg>
-<arg>Teste de citação</arg>
+<msg time="2024-03-19T13:18:41.742252" level="INFO">Sending key(s) ('Teste de nova mensagem. Data e hora:19/03/2024, 13:18:41',) to page.</msg>
+<msg time="2024-03-19T13:18:41.742252" level="INFO">Sending keys Teste de nova mensagem. Data e hora:19/03/2024, 13:18:41</msg>
+<arg>None</arg>
+<arg>${MENSAGEM-TESTE}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-03-18T11:42:30.568162" elapsed="0.406652"/>
+<status status="PASS" start="2024-03-19T13:18:41.742252" elapsed="0.688678"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:30.974814" level="INFO">Clicking element '//*[@data-testid="tweetButton"]'.</msg>
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:30.974814" elapsed="0.144464"/>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:18:42.430930" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-19T13:18:42.430930" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-19T13:18:42.430930" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:18:42.430930" elapsed="0.133739"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:42:29.780997" elapsed="1.338281"/>
-</kw>
-<kw name="E vai até o seu perfil" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PERFIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:31.121123" elapsed="0.050453"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:31.171576" level="INFO">Clicking element '//*[@href="/usuariomatteste"]'.</msg>
-<arg>${PERFIL}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:31.171576" elapsed="0.646379"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:31.120918" elapsed="0.697037"/>
-</kw>
-<kw name="Então o ultimo post deve conter a mensagem citada" owner="home_page">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-18T11:42:33.819074" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-19T13:18:44.574016" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-18T11:42:31.818999" elapsed="2.000075"/>
+<status status="PASS" start="2024-03-19T13:18:42.573575" elapsed="2.000441"/>
 </kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:33.923375" level="INFO">Element '//*[@data-testid="tweet"]' contains text 'Teste de citação'.</msg>
-<arg>${ULTIMO-POST}</arg>
-<arg>Teste de citação</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-03-18T11:42:33.819074" elapsed="0.104301"/>
+<status status="PASS" start="2024-03-19T13:18:41.175913" elapsed="3.398103"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:42:31.818999" elapsed="2.104376"/>
+<kw name="Então a mensagem enviada deve constar na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ULTIMA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:18:44.575558" elapsed="0.027313"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:18:44.575558" elapsed="0.027313"/>
 </kw>
 <kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-18T11:42:33.924895" elapsed="2.752430"/>
+<status status="PASS" start="2024-03-19T13:18:44.602871" elapsed="2.554774"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:42:33.924895" elapsed="2.752943"/>
+<status status="PASS" start="2024-03-19T13:18:44.602871" elapsed="2.554774"/>
 </kw>
-<tag>Interacao</tag>
-<status status="PASS" start="2024-03-18T11:42:13.450224" elapsed="23.227614"/>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:18:30.313565" elapsed="16.844080"/>
 </test>
-<test id="s1-t6" name="Verificar se o usuario consegue responder a uma postagem" line="129">
+<test id="s1-s1-t2" name="Verificar se o usuario consegue reagir a uma mensagem" line="180">
 <kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:36.677838" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<msg time="2024-03-19T13:18:47.157645" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-18T11:42:36.677838" elapsed="3.489443"/>
+<status status="PASS" start="2024-03-19T13:18:47.157645" elapsed="3.474678"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-18T11:42:40.167281" elapsed="0.127923"/>
+<status status="PASS" start="2024-03-19T13:18:50.632323" elapsed="0.129403"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:42:36.677838" elapsed="3.617366"/>
+<status status="PASS" start="2024-03-19T13:18:47.157645" elapsed="3.604081"/>
 </kw>
 <kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:40.295204" elapsed="0.379553"/>
+<status status="PASS" start="2024-03-19T13:18:50.765524" elapsed="0.390253"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-03-18T11:42:40.675781" elapsed="0.342114"/>
+<status status="PASS" start="2024-03-19T13:18:51.155777" elapsed="0.363133"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:41.018472" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<msg time="2024-03-19T13:18:51.525463" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
 <arg>${BOTAO-ENTRAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:41.018472" elapsed="0.157780"/>
+<status status="PASS" start="2024-03-19T13:18:51.518910" elapsed="0.104825"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${INPUT-USER}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-03-18T11:42:41.176252" elapsed="1.219607"/>
+<status status="PASS" start="2024-03-19T13:18:51.623735" elapsed="1.163721"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:42.395859" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<msg time="2024-03-19T13:18:52.787456" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
 <arg>${INPUT-USER}</arg>
 <arg>${USUARIO-CORRETO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:42.395859" elapsed="0.248080"/>
+<status status="PASS" start="2024-03-19T13:18:52.787456" elapsed="0.260226"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:42.643939" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<msg time="2024-03-19T13:18:53.047682" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
 <arg>${BOTAO-AVANCAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:42.643939" elapsed="0.089969"/>
+<status status="PASS" start="2024-03-19T13:18:53.047682" elapsed="0.087206"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${INPUT-SENHA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:42.733908" elapsed="0.483609"/>
+<status status="PASS" start="2024-03-19T13:18:53.134888" elapsed="0.458562"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:43.217517" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<msg time="2024-03-19T13:18:53.593450" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
 <arg>${INPUT-SENHA}</arg>
 <arg>${SENHA-CORRETA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:43.217517" elapsed="0.180119"/>
+<status status="PASS" start="2024-03-19T13:18:53.593450" elapsed="0.132960"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:43.397636" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<msg time="2024-03-19T13:18:53.726410" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
 <arg>${BOTAO-LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:43.397636" elapsed="0.074379"/>
+<status status="PASS" start="2024-03-19T13:18:53.726410" elapsed="0.070467"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ELEMENTO-NOTIFICACOES}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:43.472015" elapsed="2.682531"/>
+<status status="PASS" start="2024-03-19T13:18:53.798096" elapsed="2.706373"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:42:40.295204" elapsed="5.859342"/>
+<status status="PASS" start="2024-03-19T13:18:50.765524" elapsed="5.740492"/>
 </kw>
-<kw name="E clicar no botão de nova postagem" owner="home_page">
+<kw name="E clica no icone de mensagens" owner="home_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-NOVA-POSTAGEM}</arg>
+<arg>${BOTAO-MENSAGENS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:46.154546" elapsed="0.151320"/>
+<status status="PASS" start="2024-03-19T13:18:56.506016" elapsed="0.193626"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:46.306347" level="INFO">Clicking element '//*[@href="/compose/post"]'.</msg>
-<arg>${BOTAO-NOVA-POSTAGEM}</arg>
+<msg time="2024-03-19T13:18:56.699642" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:46.306347" elapsed="0.133272"/>
+<status status="PASS" start="2024-03-19T13:18:56.699642" elapsed="0.127828"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:42:46.154546" elapsed="0.285073"/>
+<status status="PASS" start="2024-03-19T13:18:56.506016" elapsed="0.321454"/>
 </kw>
-<kw name="E escrever uma nova postagem" owner="home_page">
+<kw name="E clica na conversa" owner="home_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
+<arg>${CONVERSA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:46.439619" elapsed="0.263731"/>
+<status status="PASS" start="2024-03-19T13:18:56.830176" elapsed="0.944578"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:18:57.774754" level="INFO">Clicking element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:18:57.774754" elapsed="0.154463"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:18:56.829477" elapsed="1.099740"/>
+</kw>
+<kw name="E envia uma nova mensagem" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:18:57.929217" elapsed="0.403890"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:18:58.333107" level="INFO">Clicking element '//*[@data-testid="dmComposerTextInput_label"]'.</msg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:18:58.333107" elapsed="0.155599"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:46.718982" level="INFO">Executing JavaScript:
+<msg time="2024-03-19T13:18:58.488706" level="INFO">Executing JavaScript:
 return new Date().toLocaleString()
 Without any arguments.</msg>
-<msg time="2024-03-18T11:42:46.767869" level="INFO">${DATA-HORA} = 18/03/2024, 11:42:46</msg>
+<msg time="2024-03-19T13:18:58.508873" level="INFO">${DATA-HORA} = 19/03/2024, 13:18:58</msg>
 <var>${DATA-HORA}</var>
 <arg>return new Date().toLocaleString()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-03-18T11:42:46.703350" elapsed="0.064519"/>
+<status status="PASS" start="2024-03-19T13:18:58.488706" elapsed="0.020167"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-18T11:42:46.769967" level="INFO">${MENSAGEM-POST} = Teste de nova postagem. Data e hora:18/03/2024, 11:42:46</msg>
-<arg>${MENSAGEM-POST}</arg>
-<arg>Teste de nova postagem. Data e hora:${DATA-HORA}</arg>
+<msg time="2024-03-19T13:18:58.508873" level="INFO">${MENSAGEM-TESTE} = Teste de nova mensagem. Data e hora:19/03/2024, 13:18:58</msg>
+<arg>${MENSAGEM-TESTE}</arg>
+<arg>Teste de nova mensagem. Data e hora:${DATA-HORA}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-18T11:42:46.769967" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-19T13:18:58.508873" elapsed="0.000000"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-18T11:42:46.769967" level="INFO">${ULTIMA-POSTAGEM} = //*[text()="Teste de nova postagem. Data e hora:18/03/2024, 11:42:46"]</msg>
-<arg>${ULTIMA-POSTAGEM}</arg>
-<arg>//*[text()="${MENSAGEM-POST}"]</arg>
+<msg time="2024-03-19T13:18:58.508873" level="INFO">${ULTIMA-MENSAGEM} = //div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:18:58"]</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<arg>//div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-18T11:42:46.769967" elapsed="0.000000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:46.769967" level="INFO">Typing text 'Teste de nova postagem. Data e hora:18/03/2024, 11:42:46' into text field '//*[@data-testid="tweetTextarea_0"]'.</msg>
-<arg>${AREA-POSTAGEM}</arg>
-<arg>${MENSAGEM-POST}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:46.769967" elapsed="2.259544"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:46.439619" elapsed="2.589892"/>
-</kw>
-<kw name="E clicar no botao de postar" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:49.029511" elapsed="0.074320"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:49.111850" level="INFO">Clicking element '//*[@data-testid="tweetButton"]'.</msg>
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:49.103831" elapsed="0.139230"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:49.029511" elapsed="0.213550"/>
-</kw>
-<kw name="E vai até o seu perfil" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PERFIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:49.243061" elapsed="0.083488"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:49.336704" level="INFO">Clicking element '//*[@href="/usuariomatteste"]'.</msg>
-<arg>${PERFIL}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:49.336704" elapsed="0.985464"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:49.243061" elapsed="1.079107"/>
-</kw>
-<kw name="E clica na ultima postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ULTIMO-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:50.325450" elapsed="0.961491"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:51.286941" level="INFO">Clicking element '//*[@data-testid="tweet"]'.</msg>
-<arg>${ULTIMO-POST}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:51.286941" elapsed="0.407309"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:50.325450" elapsed="1.368800"/>
-</kw>
-<kw name="E clica no botao de resposta" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-REPLY}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:51.694250" elapsed="0.311233"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:52.005483" level="INFO">Clicking element '//*[@data-testid="reply"]'.</msg>
-<arg>${BOTAO-REPLY}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:52.005483" elapsed="0.306057"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:51.694250" elapsed="0.617290"/>
-</kw>
-<kw name="E escrever uma resposta" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:52.311540" elapsed="0.165979"/>
+<status status="PASS" start="2024-03-19T13:18:58.508873" elapsed="0.000000"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:52.484651" level="INFO">Sending key(s) ('Teste de resposta',) to page.</msg>
-<msg time="2024-03-18T11:42:52.484651" level="INFO">Sending keys Teste de resposta</msg>
-<arg>none</arg>
-<arg>Teste de resposta</arg>
+<msg time="2024-03-19T13:18:58.508873" level="INFO">Sending key(s) ('Teste de nova mensagem. Data e hora:19/03/2024, 13:18:58',) to page.</msg>
+<msg time="2024-03-19T13:18:58.508873" level="INFO">Sending keys Teste de nova mensagem. Data e hora:19/03/2024, 13:18:58</msg>
+<arg>None</arg>
+<arg>${MENSAGEM-TESTE}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-03-18T11:42:52.477519" elapsed="0.474977"/>
+<status status="PASS" start="2024-03-19T13:18:58.508873" elapsed="0.725741"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:52.952496" level="INFO">Clicking element '//*[@data-testid="tweetButton"]'.</msg>
-<arg>${BOTAO-POSTAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-18T11:42:52.952496" elapsed="0.118426"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:52.311540" elapsed="0.759382"/>
-</kw>
-<kw name="Então deverá aparecer uma notificação confirmando a postagem" owner="home_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${NOTIFICACAO-POST}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:53.070922" elapsed="0.050302"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-03-18T11:42:53.171060" level="INFO">Element '//*[text()="Your post was sent."]' is displayed.</msg>
-<arg>${NOTIFICACAO-POST}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-18T11:42:53.121224" elapsed="0.049836"/>
-</kw>
-<status status="PASS" start="2024-03-18T11:42:53.070922" elapsed="0.100138"/>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:18:59.234614" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-19T13:18:59.234614" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-19T13:18:59.234614" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:18:59.234614" elapsed="0.135320"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-18T11:42:55.171933" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-19T13:19:01.370099" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-18T11:42:53.171060" elapsed="2.001533"/>
+<status status="PASS" start="2024-03-19T13:18:59.369934" elapsed="2.000165"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:18:57.929217" elapsed="3.440882"/>
+</kw>
+<kw name="E reage a mensagem" owner="home_page">
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:01.372151" level="INFO">Simulating Mouse Over on element '//div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:18:58"]'.</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:01.370099" elapsed="0.306002"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:01.370099" elapsed="0.306002"/>
 </kw>
 <kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-18T11:42:55.174935" elapsed="3.760862"/>
+<status status="PASS" start="2024-03-19T13:19:01.677661" elapsed="2.513298"/>
 </kw>
-<status status="PASS" start="2024-03-18T11:42:55.174117" elapsed="3.762189"/>
+<status status="PASS" start="2024-03-19T13:19:01.677661" elapsed="2.513298"/>
 </kw>
-<tag>Interacao</tag>
-<status status="PASS" start="2024-03-18T11:42:36.677838" elapsed="22.258468"/>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:18:47.157645" elapsed="17.033314"/>
 </test>
-<status status="PASS" start="2024-03-18T11:40:49.796986" elapsed="129.139320"/>
+<test id="s1-s1-t3" name="Verificar se o usuario consegue mandar imagens pela mensagem direta" line="188">
+<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:04.190959" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:19:04.190959" elapsed="3.458828"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:19:07.653660" elapsed="0.326421"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:04.190959" elapsed="3.789281"/>
+</kw>
+<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:07.980240" elapsed="0.255401"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:19:08.235641" elapsed="0.299750"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:08.535391" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:08.535391" elapsed="0.123050"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT-USER}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-19T13:19:08.658441" elapsed="1.172859"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:09.832280" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<arg>${INPUT-USER}</arg>
+<arg>${USUARIO-CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:09.832065" elapsed="0.236746"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:10.068811" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<arg>${BOTAO-AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:10.068811" elapsed="0.079817"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:10.148628" elapsed="0.450929"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:10.599557" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:10.599557" elapsed="0.139670"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:10.742337" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<arg>${BOTAO-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:10.742337" elapsed="0.055995"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:10.798332" elapsed="2.757015"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:07.980240" elapsed="5.575107"/>
+</kw>
+<kw name="E clica no icone de mensagens" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:13.557056" elapsed="0.140681"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:13.697737" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:13.697737" elapsed="0.162949"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:13.556359" elapsed="0.304327"/>
+</kw>
+<kw name="E clica na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:13.863921" elapsed="0.682947"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:14.546868" level="INFO">Clicking element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:14.546868" elapsed="0.085092"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:13.862064" elapsed="0.769896"/>
+</kw>
+<kw name="E adicione uma foto a ser mandada" owner="home_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:19:15.632464" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:19:14.631960" elapsed="1.000504"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:15.632464" level="INFO">Sending C:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\resources\Imagens\2150829065.jpg to browser.</msg>
+<arg>${BOTAO-MIDIA}</arg>
+<arg>C:\\Users\\v8\\Desktop\\projeto-teste-twitter\\teste-case-tt\\resources\\Imagens\\2150829065.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:15.632464" elapsed="0.087675"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:15.720139" level="INFO">Clicking element '//*[@data-testid="dmComposerTextInput_label"]'.</msg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:15.720139" elapsed="0.104825"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:15.825128" level="INFO">Executing JavaScript:
+return new Date().toLocaleString()
+Without any arguments.</msg>
+<msg time="2024-03-19T13:19:15.836576" level="INFO">${DATA-HORA} = 19/03/2024, 13:19:15</msg>
+<var>${DATA-HORA}</var>
+<arg>return new Date().toLocaleString()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-03-19T13:19:15.825128" elapsed="0.011448"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:19:15.840651" level="INFO">${MENSAGEM-TESTE} = Teste de nova mensagem. Data e hora:19/03/2024, 13:19:15</msg>
+<arg>${MENSAGEM-TESTE}</arg>
+<arg>Teste de nova mensagem. Data e hora:${DATA-HORA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:19:15.840651" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:19:15.843228" level="INFO">${ULTIMA-MENSAGEM} = //div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:19:15"]</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<arg>//div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:19:15.841678" elapsed="0.001550"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:15.843228" level="INFO">Sending key(s) ('Teste de nova mensagem. Data e hora:19/03/2024, 13:19:15',) to page.</msg>
+<msg time="2024-03-19T13:19:15.843228" level="INFO">Sending keys Teste de nova mensagem. Data e hora:19/03/2024, 13:19:15</msg>
+<arg>None</arg>
+<arg>${MENSAGEM-TESTE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:19:15.843228" elapsed="0.769514"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:16.612742" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-19T13:19:16.612742" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-19T13:19:16.612742" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:19:16.612742" elapsed="0.047943"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:19:18.660836" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:19:16.660685" elapsed="2.000151"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:14.631960" elapsed="4.028876"/>
+</kw>
+<kw name="Então a mensagem enviada deve constar na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ULTIMA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:18.660836" elapsed="0.137737"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:18.660836" elapsed="0.137737"/>
+</kw>
+<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:19:18.798573" elapsed="3.616074"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:18.798573" elapsed="3.616074"/>
+</kw>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:19:04.190959" elapsed="18.223688"/>
+</test>
+<test id="s1-s1-t4" name="Verificar se o usuario consegue mandar GIFS pela mensagem direta" line="196">
+<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:22.414647" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:19:22.414647" elapsed="3.481514"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:19:25.897209" elapsed="0.140202"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:22.414647" elapsed="3.622764"/>
+</kw>
+<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:26.040768" elapsed="0.466670"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:19:26.508274" elapsed="0.291766"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:26.805564" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:26.805564" elapsed="0.178304"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT-USER}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-19T13:19:26.987477" elapsed="1.159235"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:28.146712" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<arg>${INPUT-USER}</arg>
+<arg>${USUARIO-CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:28.146712" elapsed="0.266534"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:28.413246" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<arg>${BOTAO-AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:28.413246" elapsed="0.074556"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:28.487802" elapsed="0.486243"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:28.976574" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:28.976574" elapsed="0.149725"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:29.126367" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<arg>${BOTAO-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:29.126367" elapsed="0.074464"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:29.200831" elapsed="2.740669"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:26.040768" elapsed="5.900732"/>
+</kw>
+<kw name="E clica no icone de mensagens" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:31.941500" elapsed="0.075499"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:32.017671" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:32.016999" elapsed="0.269533"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:31.941500" elapsed="0.345032"/>
+</kw>
+<kw name="E clica na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:32.286532" elapsed="0.700824"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:32.987356" level="INFO">Clicking element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:32.987356" elapsed="0.111665"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:32.286532" elapsed="0.812489"/>
+</kw>
+<kw name="E adiciona um gif para mandar" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ADICIONAR-GIF}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:33.099021" elapsed="0.329771"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:33.428792" level="INFO">Clicking element '//*[@aria-label="Add a GIF"]'.</msg>
+<arg>${BOTAO-ADICIONAR-GIF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:33.428792" elapsed="0.182807"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:19:35.612876" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:19:33.611599" elapsed="2.001277"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:35.612876" level="INFO">Sending key(s) ('chess',) to page.</msg>
+<msg time="2024-03-19T13:19:35.612876" level="INFO">Sending keys chess</msg>
+<arg>none</arg>
+<arg>chess</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:19:35.612876" elapsed="0.066283"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${GIF}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:35.679159" elapsed="1.003973"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:36.683132" level="INFO">Clicking element '//*[@data-testid="gifSearchGifImage"]'.</msg>
+<arg>${GIF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:36.683132" elapsed="0.241298"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:33.099021" elapsed="3.825409"/>
+</kw>
+<kw name="E envia uma nova mensagem" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:36.926945" elapsed="0.039510"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:36.966455" level="INFO">Clicking element '//*[@data-testid="dmComposerTextInput_label"]'.</msg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:36.966455" elapsed="0.100695"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:37.067150" level="INFO">Executing JavaScript:
+return new Date().toLocaleString()
+Without any arguments.</msg>
+<msg time="2024-03-19T13:19:37.083189" level="INFO">${DATA-HORA} = 19/03/2024, 13:19:37</msg>
+<var>${DATA-HORA}</var>
+<arg>return new Date().toLocaleString()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-03-19T13:19:37.067150" elapsed="0.016039"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:19:37.083189" level="INFO">${MENSAGEM-TESTE} = Teste de nova mensagem. Data e hora:19/03/2024, 13:19:37</msg>
+<arg>${MENSAGEM-TESTE}</arg>
+<arg>Teste de nova mensagem. Data e hora:${DATA-HORA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:19:37.083189" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:19:37.083189" level="INFO">${ULTIMA-MENSAGEM} = //div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:19:37"]</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<arg>//div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:19:37.083189" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:37.083189" level="INFO">Sending key(s) ('Teste de nova mensagem. Data e hora:19/03/2024, 13:19:37',) to page.</msg>
+<msg time="2024-03-19T13:19:37.083189" level="INFO">Sending keys Teste de nova mensagem. Data e hora:19/03/2024, 13:19:37</msg>
+<arg>None</arg>
+<arg>${MENSAGEM-TESTE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:19:37.083189" elapsed="0.644618"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:37.727807" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-19T13:19:37.727807" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-19T13:19:37.727807" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:19:37.727807" elapsed="0.071272"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:19:39.799595" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:19:37.799079" elapsed="2.000516"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:36.926945" elapsed="2.872650"/>
+</kw>
+<kw name="Então a mensagem enviada deve constar na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ULTIMA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:39.799595" elapsed="0.087582"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:39.799595" elapsed="0.087582"/>
+</kw>
+<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:19:39.888696" elapsed="2.707446"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:39.887687" elapsed="2.709611"/>
+</kw>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:19:22.414647" elapsed="20.183163"/>
+</test>
+<test id="s1-s1-t5" name="Verificar se o usuario consegue silenciar uma conversa" line="205">
+<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:42.597810" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:19:42.597810" elapsed="3.435007"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:19:46.032817" elapsed="0.216051"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:42.597810" elapsed="3.651058"/>
+</kw>
+<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:46.248868" elapsed="0.376290"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:19:46.625158" elapsed="0.300675"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:46.928361" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:46.925833" elapsed="0.137927"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT-USER}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-19T13:19:47.063760" elapsed="1.179203"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:48.242963" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<arg>${INPUT-USER}</arg>
+<arg>${USUARIO-CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:48.242963" elapsed="0.256974"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:48.499937" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<arg>${BOTAO-AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:48.499937" elapsed="0.093277"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:48.593993" elapsed="0.475498"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:49.069491" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:49.069491" elapsed="0.155867"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:49.225358" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<arg>${BOTAO-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:49.225358" elapsed="0.089168"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:49.314526" elapsed="2.702204"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:46.248868" elapsed="5.775393"/>
+</kw>
+<kw name="E clica no icone de mensagens" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:52.025867" elapsed="0.161578"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:52.187445" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:52.187445" elapsed="0.128464"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:52.024261" elapsed="0.291648"/>
+</kw>
+<kw name="E clica em mais opções da conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:52.315909" elapsed="0.775586"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:53.091495" level="INFO">Simulating Mouse Over on element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:53.091495" elapsed="0.313087"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:19:55.404865" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:19:53.404582" elapsed="2.000283"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:55.404865" level="INFO">Clicking element '//*[@data-testid="conversation"]//*[@aria-label="More"]'.</msg>
+<arg>${BOTAO-MAIS-CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:55.404865" elapsed="0.119246"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:52.315909" elapsed="3.208202"/>
+</kw>
+<kw name="E clica em silenciar a conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-SILENCIAR-CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:55.524111" elapsed="0.079741"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:55.604795" level="INFO">Clicking element '//*[text()="Snooze conversation"]'.</msg>
+<arg>${BOTAO-SILENCIAR-CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:55.603852" elapsed="0.106988"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:55.524111" elapsed="0.186729"/>
+</kw>
+<kw name="E clica em mais opções da conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:55.710840" elapsed="0.036913"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:55.748661" level="INFO">Simulating Mouse Over on element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:55.747753" elapsed="0.314955"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:19:58.063048" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:19:56.062708" elapsed="2.000340"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:58.063048" level="INFO">Clicking element '//*[@data-testid="conversation"]//*[@aria-label="More"]'.</msg>
+<arg>${BOTAO-MAIS-CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:58.063048" elapsed="0.085047"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:55.710840" elapsed="2.437255"/>
+</kw>
+<kw name="Então a conversa deve estar silenciada" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-TIRAR-SILENCIADA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:58.148095" elapsed="0.073027"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:58.254434" level="INFO">Element '//*[text()="Take conversation off snooze"]' is displayed.</msg>
+<arg>${BOTAO-TIRAR-SILENCIADA}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:19:58.221122" elapsed="0.033312"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:19:58.254434" level="INFO">Clicking element '//*[text()="Take conversation off snooze"]'.</msg>
+<arg>${BOTAO-TIRAR-SILENCIADA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:19:58.254434" elapsed="0.094769"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:58.148095" elapsed="0.201108"/>
+</kw>
+<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:19:58.354219" elapsed="2.631739"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:19:58.354219" elapsed="2.631739"/>
+</kw>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:19:42.597810" elapsed="18.388148"/>
+</test>
+<test id="s1-s1-t6" name="Verificar se o usuario consegue receber novas mensagens" line="214">
+<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:00.985958" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:20:00.985958" elapsed="3.491802"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:20:04.477760" elapsed="0.120662"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:00.985958" elapsed="3.612464"/>
+</kw>
+<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:04.598422" elapsed="0.942261"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:20:05.548700" elapsed="0.392068"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:05.940768" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:05.940768" elapsed="0.118733"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT-USER}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-19T13:20:06.060522" elapsed="1.434507"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:07.495029" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<arg>${INPUT-USER}</arg>
+<arg>${USUARIO-CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:07.495029" elapsed="0.247542"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:07.747640" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<arg>${BOTAO-AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:07.747640" elapsed="0.082195"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:07.829835" elapsed="0.471890"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:08.301725" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:08.301725" elapsed="0.164126"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:08.465851" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<arg>${BOTAO-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:08.465851" elapsed="0.066875"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:08.534910" elapsed="2.756797"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:04.598422" elapsed="6.693285"/>
+</kw>
+<kw name="E clica no icone de mensagens" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:11.291707" elapsed="0.091049"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:11.389023" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:11.382756" elapsed="0.122213"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:11.291707" elapsed="0.213262"/>
+</kw>
+<kw name="E clica na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:11.504969" elapsed="0.906367"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:12.412027" level="INFO">Clicking element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:12.412027" elapsed="0.113162"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:11.504969" elapsed="1.020220"/>
+</kw>
+<kw name="E adicione uma foto a ser mandada" owner="home_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:20:13.525834" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:20:12.525189" elapsed="1.000645"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:13.525834" level="INFO">Sending C:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\resources\Imagens\2150829065.jpg to browser.</msg>
+<arg>${BOTAO-MIDIA}</arg>
+<arg>C:\\Users\\v8\\Desktop\\projeto-teste-twitter\\teste-case-tt\\resources\\Imagens\\2150829065.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:13.525834" elapsed="0.071599"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:13.597433" level="INFO">Clicking element '//*[@data-testid="dmComposerTextInput_label"]'.</msg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:13.597433" elapsed="0.111118"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:13.709945" level="INFO">Executing JavaScript:
+return new Date().toLocaleString()
+Without any arguments.</msg>
+<msg time="2024-03-19T13:20:13.723880" level="INFO">${DATA-HORA} = 19/03/2024, 13:20:13</msg>
+<var>${DATA-HORA}</var>
+<arg>return new Date().toLocaleString()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-03-19T13:20:13.709945" elapsed="0.013935"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:20:13.726322" level="INFO">${MENSAGEM-TESTE} = Teste de nova mensagem. Data e hora:19/03/2024, 13:20:13</msg>
+<arg>${MENSAGEM-TESTE}</arg>
+<arg>Teste de nova mensagem. Data e hora:${DATA-HORA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:20:13.723880" elapsed="0.002442"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:20:13.726322" level="INFO">${ULTIMA-MENSAGEM} = //div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:20:13"]</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<arg>//div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:20:13.726322" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:13.726322" level="INFO">Sending key(s) ('Teste de nova mensagem. Data e hora:19/03/2024, 13:20:13',) to page.</msg>
+<msg time="2024-03-19T13:20:13.726322" level="INFO">Sending keys Teste de nova mensagem. Data e hora:19/03/2024, 13:20:13</msg>
+<arg>None</arg>
+<arg>${MENSAGEM-TESTE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:20:13.726322" elapsed="0.749201"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:14.475523" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-19T13:20:14.475523" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-19T13:20:14.475523" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:20:14.475523" elapsed="0.044459"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:20:16.524465" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:20:14.519982" elapsed="2.004483"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:12.525189" elapsed="3.999919"/>
+</kw>
+<kw name="Então a mensagem enviada deve constar na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ULTIMA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:16.525887" elapsed="0.033386"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:16.525887" elapsed="0.033386"/>
+</kw>
+<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:20:16.559273" elapsed="2.571289"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:16.559273" elapsed="2.572265"/>
+</kw>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:20:00.985958" elapsed="18.145580"/>
+</test>
+<status status="PASS" start="2024-03-19T13:18:29.126993" elapsed="110.004545"/>
+</suite>
+<suite id="s1-s2" name="Teste-Case-Tt" source="c:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt">
+<suite id="s1-s2-s1" name="Testes" source="c:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\testes">
+<suite id="s1-s2-s1-s1" name="Home-Page" source="c:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\testes\home-page.robot">
+<test id="s1-s2-s1-s1-t1" name="Verificar se o usuário consegue enviar mensagens diretas a outros usuários" line="172">
+<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:19.194784" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:20:19.194784" elapsed="3.501332"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:20:22.696116" elapsed="0.121421"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:19.194784" elapsed="3.622753"/>
+</kw>
+<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:22.823528" elapsed="0.446596"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:20:23.270124" elapsed="0.350786"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:23.620910" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:23.620910" elapsed="0.144861"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT-USER}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-19T13:20:23.766764" elapsed="1.019128"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:24.785892" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<arg>${INPUT-USER}</arg>
+<arg>${USUARIO-CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:24.785892" elapsed="0.249651"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:25.035543" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<arg>${BOTAO-AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:25.035543" elapsed="0.079807"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:25.115350" elapsed="0.460003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:25.575353" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:25.575353" elapsed="0.132002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:25.707355" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<arg>${BOTAO-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:25.707355" elapsed="0.058974"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:25.766329" elapsed="2.593832"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:22.823528" elapsed="5.536633"/>
+</kw>
+<kw name="E clica no icone de mensagens" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:28.360161" elapsed="0.192484"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:28.552645" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:28.552645" elapsed="0.209158"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:28.360161" elapsed="0.401642"/>
+</kw>
+<kw name="E clica na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:28.761803" elapsed="0.732068"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:29.493871" level="INFO">Clicking element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:29.493871" elapsed="0.194533"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:28.761803" elapsed="0.926601"/>
+</kw>
+<kw name="E envia uma nova mensagem" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:29.690577" elapsed="0.294668"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:29.989044" level="INFO">Clicking element '//*[@data-testid="dmComposerTextInput_label"]'.</msg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:29.988331" elapsed="0.148798"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:30.137129" level="INFO">Executing JavaScript:
+return new Date().toLocaleString()
+Without any arguments.</msg>
+<msg time="2024-03-19T13:20:30.183365" level="INFO">${DATA-HORA} = 19/03/2024, 13:20:30</msg>
+<var>${DATA-HORA}</var>
+<arg>return new Date().toLocaleString()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-03-19T13:20:30.137129" elapsed="0.046236"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:20:30.183365" level="INFO">${MENSAGEM-TESTE} = Teste de nova mensagem. Data e hora:19/03/2024, 13:20:30</msg>
+<arg>${MENSAGEM-TESTE}</arg>
+<arg>Teste de nova mensagem. Data e hora:${DATA-HORA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:20:30.183365" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:20:30.183365" level="INFO">${ULTIMA-MENSAGEM} = //div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:20:30"]</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<arg>//div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:20:30.183365" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:30.183365" level="INFO">Sending key(s) ('Teste de nova mensagem. Data e hora:19/03/2024, 13:20:30',) to page.</msg>
+<msg time="2024-03-19T13:20:30.183365" level="INFO">Sending keys Teste de nova mensagem. Data e hora:19/03/2024, 13:20:30</msg>
+<arg>None</arg>
+<arg>${MENSAGEM-TESTE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:20:30.183365" elapsed="0.558747"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:30.742112" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-19T13:20:30.742112" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-19T13:20:30.742112" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:20:30.742112" elapsed="0.098106"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:20:32.840772" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:20:30.840218" elapsed="2.000554"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:29.688404" elapsed="3.152368"/>
+</kw>
+<kw name="Então a mensagem enviada deve constar na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ULTIMA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:32.840772" elapsed="0.049214"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:32.840772" elapsed="0.049214"/>
+</kw>
+<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:20:32.892982" elapsed="2.506328"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:32.892982" elapsed="2.506328"/>
+</kw>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:20:19.194784" elapsed="16.204526"/>
+</test>
+<test id="s1-s2-s1-s1-t2" name="Verificar se o usuario consegue reagir a uma mensagem" line="180">
+<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:35.399310" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:20:35.399310" elapsed="3.478337"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:20:38.880624" elapsed="0.243013"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:35.399310" elapsed="3.725038"/>
+</kw>
+<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:39.126632" elapsed="0.347730"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:20:39.488983" elapsed="0.301069"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:39.790052" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:39.790052" elapsed="0.134020"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT-USER}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-19T13:20:39.924072" elapsed="1.431654"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:41.357447" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<arg>${INPUT-USER}</arg>
+<arg>${USUARIO-CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:41.356655" elapsed="0.256228"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:41.613790" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<arg>${BOTAO-AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:41.613790" elapsed="0.086136"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:41.699926" elapsed="0.453782"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:42.153708" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:42.153708" elapsed="0.153013"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:42.306721" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<arg>${BOTAO-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:42.306721" elapsed="0.068884"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:42.375605" elapsed="2.973427"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:39.125552" elapsed="6.223480"/>
+</kw>
+<kw name="E clica no icone de mensagens" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:45.353579" elapsed="0.059166"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:45.418183" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:45.418183" elapsed="0.130825"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:45.353579" elapsed="0.195429"/>
+</kw>
+<kw name="E clica na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:45.550719" elapsed="0.908907"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:46.459626" level="INFO">Clicking element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:46.459626" elapsed="0.101768"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:45.549008" elapsed="1.012386"/>
+</kw>
+<kw name="E envia uma nova mensagem" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:46.561394" elapsed="0.313665"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:46.876741" level="INFO">Clicking element '//*[@data-testid="dmComposerTextInput_label"]'.</msg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:46.875059" elapsed="0.086533"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:46.961592" level="INFO">Executing JavaScript:
+return new Date().toLocaleString()
+Without any arguments.</msg>
+<msg time="2024-03-19T13:20:46.978908" level="INFO">${DATA-HORA} = 19/03/2024, 13:20:46</msg>
+<var>${DATA-HORA}</var>
+<arg>return new Date().toLocaleString()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-03-19T13:20:46.961592" elapsed="0.017316"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:20:46.979613" level="INFO">${MENSAGEM-TESTE} = Teste de nova mensagem. Data e hora:19/03/2024, 13:20:46</msg>
+<arg>${MENSAGEM-TESTE}</arg>
+<arg>Teste de nova mensagem. Data e hora:${DATA-HORA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:20:46.979613" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:20:46.979613" level="INFO">${ULTIMA-MENSAGEM} = //div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:20:46"]</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<arg>//div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:20:46.979613" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:46.981603" level="INFO">Sending key(s) ('Teste de nova mensagem. Data e hora:19/03/2024, 13:20:46',) to page.</msg>
+<msg time="2024-03-19T13:20:46.981603" level="INFO">Sending keys Teste de nova mensagem. Data e hora:19/03/2024, 13:20:46</msg>
+<arg>None</arg>
+<arg>${MENSAGEM-TESTE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:20:46.979613" elapsed="0.718793"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:47.698406" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-19T13:20:47.698406" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-19T13:20:47.698406" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:20:47.698406" elapsed="0.138513"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:20:49.837084" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:20:47.836919" elapsed="2.000165"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:46.561394" elapsed="3.275690"/>
+</kw>
+<kw name="E reage a mensagem" owner="home_page">
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:49.838093" level="INFO">Simulating Mouse Over on element '//div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:20:46"]'.</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:49.838093" elapsed="0.372479"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:49.837084" elapsed="0.373488"/>
+</kw>
+<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:20:50.210572" elapsed="2.592312"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:50.210572" elapsed="2.592312"/>
+</kw>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:20:35.399310" elapsed="17.403574"/>
+</test>
+<test id="s1-s2-s1-s1-t3" name="Verificar se o usuario consegue mandar imagens pela mensagem direta" line="188">
+<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:52.802884" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:20:52.802884" elapsed="3.465927"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:20:56.268811" elapsed="0.211513"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:52.802884" elapsed="3.677440"/>
+</kw>
+<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:56.480324" elapsed="0.378359"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:20:56.858683" elapsed="0.305862"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:57.164545" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:57.164545" elapsed="0.117092"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT-USER}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-19T13:20:57.281762" elapsed="1.407549"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:58.689311" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<arg>${INPUT-USER}</arg>
+<arg>${USUARIO-CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:58.689311" elapsed="0.285580"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:58.976857" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<arg>${BOTAO-AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:58.974891" elapsed="0.066325"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:59.041216" elapsed="0.489702"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:59.532447" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:59.531761" elapsed="0.130642"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:20:59.662403" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<arg>${BOTAO-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:20:59.662403" elapsed="0.065392"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:20:59.727795" elapsed="2.753067"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:20:56.480324" elapsed="6.000538"/>
+</kw>
+<kw name="E clica no icone de mensagens" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:02.480862" elapsed="0.065587"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:02.546449" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:02.546449" elapsed="0.128151"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:02.480862" elapsed="0.193738"/>
+</kw>
+<kw name="E clica na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:02.674600" elapsed="0.736648"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:03.411248" level="INFO">Clicking element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:03.411248" elapsed="0.166874"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:02.674600" elapsed="0.903522"/>
+</kw>
+<kw name="E adicione uma foto a ser mandada" owner="home_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:21:04.580120" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:21:03.579626" elapsed="1.000494"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:04.580120" level="INFO">Sending C:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\resources\Imagens\2150829065.jpg to browser.</msg>
+<arg>${BOTAO-MIDIA}</arg>
+<arg>C:\\Users\\v8\\Desktop\\projeto-teste-twitter\\teste-case-tt\\resources\\Imagens\\2150829065.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:04.580120" elapsed="0.067537"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:04.647657" level="INFO">Clicking element '//*[@data-testid="dmComposerTextInput_label"]'.</msg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:04.647657" elapsed="0.113518"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:04.761175" level="INFO">Executing JavaScript:
+return new Date().toLocaleString()
+Without any arguments.</msg>
+<msg time="2024-03-19T13:21:04.776467" level="INFO">${DATA-HORA} = 19/03/2024, 13:21:04</msg>
+<var>${DATA-HORA}</var>
+<arg>return new Date().toLocaleString()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-03-19T13:21:04.761175" elapsed="0.015292"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:21:04.776467" level="INFO">${MENSAGEM-TESTE} = Teste de nova mensagem. Data e hora:19/03/2024, 13:21:04</msg>
+<arg>${MENSAGEM-TESTE}</arg>
+<arg>Teste de nova mensagem. Data e hora:${DATA-HORA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:21:04.776467" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:21:04.776467" level="INFO">${ULTIMA-MENSAGEM} = //div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:21:04"]</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<arg>//div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:21:04.776467" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:04.776467" level="INFO">Sending key(s) ('Teste de nova mensagem. Data e hora:19/03/2024, 13:21:04',) to page.</msg>
+<msg time="2024-03-19T13:21:04.776467" level="INFO">Sending keys Teste de nova mensagem. Data e hora:19/03/2024, 13:21:04</msg>
+<arg>None</arg>
+<arg>${MENSAGEM-TESTE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:21:04.776467" elapsed="0.771783"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:05.548250" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-19T13:21:05.548250" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-19T13:21:05.548250" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:21:05.548250" elapsed="0.047627"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:21:07.596043" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:21:05.595877" elapsed="2.000166"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:03.579626" elapsed="4.016417"/>
+</kw>
+<kw name="Então a mensagem enviada deve constar na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ULTIMA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:07.597200" elapsed="0.027355"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:07.596637" elapsed="0.027918"/>
+</kw>
+<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:21:07.631678" elapsed="2.575570"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:07.631678" elapsed="2.576175"/>
+</kw>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:20:52.802884" elapsed="17.404969"/>
+</test>
+<test id="s1-s2-s1-s1-t4" name="Verificar se o usuario consegue mandar GIFS pela mensagem direta" line="196">
+<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:10.246083" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:21:10.246083" elapsed="3.525525"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:21:13.771608" elapsed="0.127721"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:10.246083" elapsed="3.653246"/>
+</kw>
+<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:13.901598" elapsed="0.431293"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:21:14.332891" elapsed="0.328910"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:14.661801" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:14.661801" elapsed="0.108232"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT-USER}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-19T13:21:14.770033" elapsed="1.158594"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:15.928627" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<arg>${INPUT-USER}</arg>
+<arg>${USUARIO-CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:15.928627" elapsed="0.227171"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:16.159919" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<arg>${BOTAO-AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:16.155798" elapsed="0.078079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:16.234899" elapsed="0.454503"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:16.689402" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:16.689402" elapsed="0.129287"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:16.823465" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<arg>${BOTAO-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:16.822653" elapsed="0.058098"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:16.880751" elapsed="2.752406"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:13.901598" elapsed="5.731559"/>
+</kw>
+<kw name="E clica no icone de mensagens" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:19.633157" elapsed="0.051390"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:19.684547" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:19.684547" elapsed="0.100510"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:19.633157" elapsed="0.151900"/>
+</kw>
+<kw name="E clica na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:19.786868" elapsed="0.919135"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:20.706003" level="INFO">Clicking element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:20.706003" elapsed="0.107357"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:19.785057" elapsed="1.028303"/>
+</kw>
+<kw name="E adiciona um gif para mandar" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ADICIONAR-GIF}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:20.822919" elapsed="0.355913"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:21.178832" level="INFO">Clicking element '//*[@aria-label="Add a GIF"]'.</msg>
+<arg>${BOTAO-ADICIONAR-GIF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:21.178832" elapsed="0.182183"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:21:23.361067" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:21:21.361015" elapsed="2.000052"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:23.361067" level="INFO">Sending key(s) ('chess',) to page.</msg>
+<msg time="2024-03-19T13:21:23.361067" level="INFO">Sending keys chess</msg>
+<arg>none</arg>
+<arg>chess</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:21:23.361067" elapsed="0.083940"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${GIF}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:23.445007" elapsed="1.150118"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:24.595125" level="INFO">Clicking element '//*[@data-testid="gifSearchGifImage"]'.</msg>
+<arg>${GIF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:24.595125" elapsed="0.460723"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:20.813360" elapsed="4.242488"/>
+</kw>
+<kw name="E envia uma nova mensagem" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:25.066588" elapsed="0.038800"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:25.120783" level="INFO">Clicking element '//*[@data-testid="dmComposerTextInput_label"]'.</msg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:25.105388" elapsed="0.104631"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:25.210019" level="INFO">Executing JavaScript:
+return new Date().toLocaleString()
+Without any arguments.</msg>
+<msg time="2024-03-19T13:21:25.219330" level="INFO">${DATA-HORA} = 19/03/2024, 13:21:25</msg>
+<var>${DATA-HORA}</var>
+<arg>return new Date().toLocaleString()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-03-19T13:21:25.210019" elapsed="0.009311"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:21:25.219330" level="INFO">${MENSAGEM-TESTE} = Teste de nova mensagem. Data e hora:19/03/2024, 13:21:25</msg>
+<arg>${MENSAGEM-TESTE}</arg>
+<arg>Teste de nova mensagem. Data e hora:${DATA-HORA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:21:25.219330" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:21:25.232721" level="INFO">${ULTIMA-MENSAGEM} = //div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:21:25"]</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<arg>//div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:21:25.219330" elapsed="0.013391"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:25.232721" level="INFO">Sending key(s) ('Teste de nova mensagem. Data e hora:19/03/2024, 13:21:25',) to page.</msg>
+<msg time="2024-03-19T13:21:25.232721" level="INFO">Sending keys Teste de nova mensagem. Data e hora:19/03/2024, 13:21:25</msg>
+<arg>None</arg>
+<arg>${MENSAGEM-TESTE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:21:25.232721" elapsed="0.676257"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:25.908978" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-19T13:21:25.908978" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-19T13:21:25.908978" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:21:25.908978" elapsed="0.081360"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:21:27.994173" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:21:25.993690" elapsed="2.000483"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:25.066588" elapsed="2.927585"/>
+</kw>
+<kw name="Então a mensagem enviada deve constar na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ULTIMA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:27.996433" elapsed="0.030699"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:27.994173" elapsed="0.032959"/>
+</kw>
+<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:21:28.027132" elapsed="2.762243"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:28.027132" elapsed="2.762243"/>
+</kw>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:21:10.246083" elapsed="20.544814"/>
+</test>
+<test id="s1-s2-s1-s1-t5" name="Verificar se o usuario consegue silenciar uma conversa" line="205">
+<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:30.790897" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:21:30.790897" elapsed="3.456288"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:21:34.247719" elapsed="0.138622"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:30.790897" elapsed="3.595444"/>
+</kw>
+<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:34.394716" elapsed="0.450207"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:21:34.844923" elapsed="0.294285"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:35.139697" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:35.139697" elapsed="0.123336"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT-USER}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-19T13:21:35.263260" elapsed="1.200694"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:36.463954" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<arg>${INPUT-USER}</arg>
+<arg>${USUARIO-CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:36.463954" elapsed="0.245202"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:36.709156" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<arg>${BOTAO-AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:36.709156" elapsed="0.073780"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:36.788997" elapsed="0.477955"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:37.267770" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:37.267770" elapsed="0.163808"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:37.431578" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<arg>${BOTAO-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:37.431578" elapsed="0.076055"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:37.507633" elapsed="2.918280"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:34.394716" elapsed="6.031197"/>
+</kw>
+<kw name="E clica no icone de mensagens" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:40.425913" elapsed="0.038882"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:40.464795" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:40.464795" elapsed="0.125821"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:40.425913" elapsed="0.164703"/>
+</kw>
+<kw name="E clica em mais opções da conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:40.590616" elapsed="0.748638"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:41.339254" level="INFO">Simulating Mouse Over on element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:41.339254" elapsed="0.300722"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:21:43.640206" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:21:41.639976" elapsed="2.000230"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:43.640723" level="INFO">Clicking element '//*[@data-testid="conversation"]//*[@aria-label="More"]'.</msg>
+<arg>${BOTAO-MAIS-CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:43.640723" elapsed="0.135264"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:40.590616" elapsed="3.188403"/>
+</kw>
+<kw name="E clica em silenciar a conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-SILENCIAR-CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:43.779019" elapsed="0.276298"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:44.055831" level="INFO">Clicking element '//*[text()="Snooze conversation"]'.</msg>
+<arg>${BOTAO-SILENCIAR-CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:44.055831" elapsed="0.077222"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:43.779019" elapsed="0.354034"/>
+</kw>
+<kw name="E clica em mais opções da conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:44.133053" elapsed="0.031258"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:44.164311" level="INFO">Simulating Mouse Over on element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:44.164311" elapsed="0.295107"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:21:46.460160" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:21:44.459418" elapsed="2.000742"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:46.460160" level="INFO">Clicking element '//*[@data-testid="conversation"]//*[@aria-label="More"]'.</msg>
+<arg>${BOTAO-MAIS-CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:46.460160" elapsed="0.087764"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:44.133053" elapsed="2.414871"/>
+</kw>
+<kw name="Então a conversa deve estar silenciada" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-TIRAR-SILENCIADA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:46.547924" elapsed="0.045488"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:46.628653" level="INFO">Element '//*[text()="Take conversation off snooze"]' is displayed.</msg>
+<arg>${BOTAO-TIRAR-SILENCIADA}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:46.594013" elapsed="0.034640"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:46.628653" level="INFO">Clicking element '//*[text()="Take conversation off snooze"]'.</msg>
+<arg>${BOTAO-TIRAR-SILENCIADA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:46.628653" elapsed="0.080810"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:46.547924" elapsed="0.161539"/>
+</kw>
+<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:21:46.720976" elapsed="2.644506"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:46.709463" elapsed="2.656019"/>
+</kw>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:21:30.790897" elapsed="18.574585"/>
+</test>
+<test id="s1-s2-s1-s1-t6" name="Verificar se o usuario consegue receber novas mensagens" line="214">
+<kw name="Dado que eu acesse o site do twitter" owner="setupteardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:49.365482" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:21:49.365482" elapsed="4.143479"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:21:53.508961" elapsed="0.120092"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:49.365482" elapsed="4.263571"/>
+</kw>
+<kw name="Quando o usuario tentar entrar com as credenciais corretas" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:53.629053" elapsed="0.037514"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:21:53.666567" elapsed="0.299446"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:53.966013" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${BOTAO-ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:53.966013" elapsed="0.113810"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT-USER}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-19T13:21:54.079823" elapsed="1.809465"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:55.889288" level="INFO">Typing text 'usuariomatteste' into text field '//*[@autocomplete="username"]'.</msg>
+<arg>${INPUT-USER}</arg>
+<arg>${USUARIO-CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:55.889288" elapsed="0.237734"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:56.127022" level="INFO">Clicking element '//*[text()="Avançar"]'.</msg>
+<arg>${BOTAO-AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:56.127022" elapsed="0.095741"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT-SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:56.222763" elapsed="0.469100"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:56.691863" level="INFO">Typing text 'teste@1234' into text field '//*[@autocomplete="current-password"]'.</msg>
+<arg>${INPUT-SENHA}</arg>
+<arg>${SENHA-CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:56.691863" elapsed="0.148672"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:56.840535" level="INFO">Clicking element '//*[@data-testid="LoginForm_Login_Button"]'.</msg>
+<arg>${BOTAO-LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:56.840535" elapsed="0.075734"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ELEMENTO-NOTIFICACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:56.916269" elapsed="2.824260"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:53.629053" elapsed="6.111476"/>
+</kw>
+<kw name="E clica no icone de mensagens" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:59.740529" elapsed="0.061273"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:21:59.801802" level="INFO">Clicking element '//*[@data-testid="AppTabBar_DirectMessage_Link"]'.</msg>
+<arg>${BOTAO-MENSAGENS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:21:59.801802" elapsed="0.102147"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:59.740529" elapsed="0.163420"/>
+</kw>
+<kw name="E clica na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONVERSA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:21:59.905036" elapsed="0.768384"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:00.674539" level="INFO">Clicking element '//*[@data-testid="conversation"]'.</msg>
+<arg>${CONVERSA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:00.673420" elapsed="0.128088"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:21:59.905036" elapsed="0.896472"/>
+</kw>
+<kw name="E adicione uma foto a ser mandada" owner="home_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:22:01.801715" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:22:00.801508" elapsed="1.000207"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:01.801715" level="INFO">Sending C:\Users\v8\Desktop\projeto-teste-twitter\teste-case-tt\resources\Imagens\2150829065.jpg to browser.</msg>
+<arg>${BOTAO-MIDIA}</arg>
+<arg>C:\\Users\\v8\\Desktop\\projeto-teste-twitter\\teste-case-tt\\resources\\Imagens\\2150829065.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:01.801715" elapsed="0.058001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:01.859716" level="INFO">Clicking element '//*[@data-testid="dmComposerTextInput_label"]'.</msg>
+<arg>${INPUT-NOVA-MENSAGEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:01.859716" elapsed="0.123019"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:01.982735" level="INFO">Executing JavaScript:
+return new Date().toLocaleString()
+Without any arguments.</msg>
+<msg time="2024-03-19T13:22:01.996332" level="INFO">${DATA-HORA} = 19/03/2024, 13:22:01</msg>
+<var>${DATA-HORA}</var>
+<arg>return new Date().toLocaleString()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-03-19T13:22:01.982735" elapsed="0.013597"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:22:01.996332" level="INFO">${MENSAGEM-TESTE} = Teste de nova mensagem. Data e hora:19/03/2024, 13:22:01</msg>
+<arg>${MENSAGEM-TESTE}</arg>
+<arg>Teste de nova mensagem. Data e hora:${DATA-HORA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:22:01.996332" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-19T13:22:01.996332" level="INFO">${ULTIMA-MENSAGEM} = //div[@data-testid="tweetText"]//*[text()="Teste de nova mensagem. Data e hora:19/03/2024, 13:22:01"]</msg>
+<arg>${ULTIMA-MENSAGEM}</arg>
+<arg>//div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-19T13:22:01.996332" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:01.996332" level="INFO">Sending key(s) ('Teste de nova mensagem. Data e hora:19/03/2024, 13:22:01',) to page.</msg>
+<msg time="2024-03-19T13:22:01.996332" level="INFO">Sending keys Teste de nova mensagem. Data e hora:19/03/2024, 13:22:01</msg>
+<arg>None</arg>
+<arg>${MENSAGEM-TESTE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:22:01.996332" elapsed="0.677347"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:02.673679" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-19T13:22:02.673679" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-19T13:22:02.673679" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:22:02.673679" elapsed="0.069827"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:22:04.743767" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:22:02.743506" elapsed="2.000261"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:00.801508" elapsed="3.942259"/>
+</kw>
+<kw name="Então a mensagem enviada deve constar na conversa" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ULTIMA-MENSAGEM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:22:04.743767" elapsed="0.076462"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:04.743767" elapsed="0.076462"/>
+</kw>
+<kw name="Fechar navegador" owner="setupteardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:22:04.822940" elapsed="3.598813"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:04.822940" elapsed="3.598813"/>
+</kw>
+<tag>Mensagem</tag>
+<status status="PASS" start="2024-03-19T13:21:49.365482" elapsed="19.056271"/>
+</test>
+<status status="PASS" start="2024-03-19T13:20:19.146276" elapsed="109.280138"/>
+</suite>
+<status status="PASS" start="2024-03-19T13:20:19.131538" elapsed="109.294876"/>
+</suite>
+<status status="PASS" start="2024-03-19T13:20:19.131538" elapsed="109.302848"/>
+</suite>
+<status status="PASS" start="2024-03-19T13:18:29.074727" elapsed="219.362747"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="0" skip="0">All Tests</stat>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="6" fail="0" skip="0">Interacao</stat>
+<stat pass="12" fail="0" skip="0">Mensagem</stat>
 </tag>
 <suite>
-<stat pass="6" fail="0" skip="0" id="s1" name="Home-Page">Home-Page</stat>
+<stat pass="12" fail="0" skip="0" id="s1" name="Home-Page &amp; Teste-Case-Tt">Home-Page &amp; Teste-Case-Tt</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="Home-Page">Home-Page &amp; Teste-Case-Tt.Home-Page</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s2" name="Teste-Case-Tt">Home-Page &amp; Teste-Case-Tt.Teste-Case-Tt</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s2-s1" name="Testes">Home-Page &amp; Teste-Case-Tt.Teste-Case-Tt.Testes</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s2-s1-s1" name="Home-Page">Home-Page &amp; Teste-Case-Tt.Teste-Case-Tt.Testes.Home-Page</stat>
 </suite>
 </statistics>
 <errors>

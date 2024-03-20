@@ -72,13 +72,11 @@ E clica no icone de mensagens
     Click Element    ${BOTAO-MENSAGENS}
 
 E envia uma nova mensagem 
-    Wait Until Element Is Visible    ${CONVERSA}
-    Click Element    ${CONVERSA}
     Wait Until Element Is Visible    ${INPUT-NOVA-MENSAGEM}
     Click Element    ${INPUT-NOVA-MENSAGEM}
     ${DATA-HORA}    Execute Javascript     return new Date().toLocaleString()
     Set Global Variable    ${MENSAGEM-TESTE}    Teste de nova mensagem. Data e hora:${DATA-HORA}  
-    Set Global Variable    ${ULTIMA-MENSAGEM}     //*[text()="${MENSAGEM-TESTE}"]
+    Set Global Variable    ${ULTIMA-MENSAGEM}     //div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]
     Press Keys    None       ${MENSAGEM-TESTE}
     Press Keys    None     ENTER
     Sleep    2s
@@ -274,3 +272,46 @@ E escrever uma resposta
     Wait Until Element Is Visible    ${BOTAO-POSTAR}
     Press Keys    none    Teste de resposta 
     Click Element    ${BOTAO-POSTAR}
+
+E reage a mensagem
+    Mouse Over    ${ULTIMA-MENSAGEM}
+    #Wait Until Element Is Enabled    ${BOTAO-REAGIR}
+
+E adicione uma foto a ser mandada  
+    #Wait Until Element Is Visible    ${BOTAO-MIDIA}  
+    Sleep    1s
+    Choose File    ${BOTAO-MIDIA}    C:\\Users\\v8\\Desktop\\projeto-teste-twitter\\teste-case-tt\\resources\\Imagens\\2150829065.jpg
+    Click Element    ${INPUT-NOVA-MENSAGEM}
+    ${DATA-HORA}    Execute Javascript     return new Date().toLocaleString()
+    Set Global Variable    ${MENSAGEM-TESTE}    Teste de nova mensagem. Data e hora:${DATA-HORA}  
+    Set Global Variable    ${ULTIMA-MENSAGEM}     //div[@data-testid="tweetText"]//*[text()="${MENSAGEM-TESTE}"]
+    Press Keys    None       ${MENSAGEM-TESTE}
+    Press Keys    None     ENTER
+    Sleep    2s
+
+E clica na conversa
+    Wait Until Element Is Visible    ${CONVERSA}
+    Click Element    ${CONVERSA}
+
+E adiciona um gif para mandar
+    Wait Until Element Is Visible    ${BOTAO-ADICIONAR-GIF}
+    Click Element    ${BOTAO-ADICIONAR-GIF}
+    Sleep    2s
+    Press Keys    none     chess
+    Wait Until Element Is Visible    ${GIF}
+    Click Element    ${GIF}
+
+E clica em mais opções da conversa
+    Wait Until Element Is Visible    ${CONVERSA}
+    Mouse Over    ${CONVERSA}
+    Sleep    2s
+    Click Element    ${BOTAO-MAIS-CONVERSA}
+
+E clica em silenciar a conversa
+    Wait Until Element Is Visible    ${BOTAO-SILENCIAR-CONVERSA}
+    Click Element    ${BOTAO-SILENCIAR-CONVERSA}
+
+Então a conversa deve estar silenciada
+    Wait Until Element Is Visible    ${BOTAO-TIRAR-SILENCIADA}
+    Element Should Be Visible    ${BOTAO-TIRAR-SILENCIADA}
+    Click Element    ${BOTAO-TIRAR-SILENCIADA}
